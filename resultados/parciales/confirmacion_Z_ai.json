@@ -1,0 +1,43 @@
+{
+  "agente": "Z.ai (Super Z)",
+  "tarea_leida": "agente_vet_estandar_clinico.lock (creado por Z.ai - no existia en GitHub)",
+  "flujos_a_modificar": [
+    "JDJKp1yYSFFu4BtV",
+    "cabjTOjqu7Ks1r58",
+    "930XCm4vY3TurOlL",
+    "cthc7GvuYZlPIDCI",
+    "1zGqGSPhZITvCttw",
+    "7554aQXudKBRWEkQ",
+    "9KrKde8O3cijCcBf",
+    "CDQHp2kdQszHYKqN",
+    "bDEvev5P1BC9MAPA",
+    "IyUZcl96GcRjVZF5",
+    "dAc6Uw37UeNLTshk",
+    "MwA6MSqZnsdNqv5Y",
+    "FNSqMpwphHB1w3WL",
+    "AeGdjdxnXZThPmjE",
+    "aqJQo8AEmxH4euHZ",
+    "EjgZ8uVfHQqzQqbF",
+    "DS5gqoroBG3SAXKB",
+    "aWuJN5aWVLfdrJAi",
+    "Xu385bbjE7JqapnW",
+    "STiwKMm2UXn6jSfa",
+    "7rdIEIngthCHxiHV",
+    "NiEeirlD1yI7zVhu",
+    "CZEzMQrOOA9UoWyn",
+    "3TihmuY7TlK4NZSN",
+    "bssm7ANnpogoMt0V",
+    "HtFV0KcqD42VqZvr",
+    "UCXNMMBg1NZPmH5v"
+  ],
+  "entendimiento_eeat": "Para VETERINARIA: Agregar caso clinico veterinario con datos de laboratorio (hemograma, bioquimica), citas APA de libros vet (Nelson & Couto, Greene, Bartges, Merck), y clausula de pureza que PROHIBE contenido humano o legal. Para BIENESTAR HUMANO (ANSIEDAD/ESTRES): Reemplazar prompt vet completo con historias de pacientes humanos, citas OMS/NIH, protocolos de salud mental, disclaimer medico, y clausula que PROHIBE contenido veterinario o legal.",
+  "fecha_limite_ejecucion": "2026-07-08T18:00:00Z",
+  "estado": "COMPLETADO",
+  "resultados": {
+    "vet_pureza_agregada": 22,
+    "humanos_corregidos": 2,
+    "legales_verificados": 6,
+    "total_modificados": 24,
+    "errores": 0
+  }
+}
