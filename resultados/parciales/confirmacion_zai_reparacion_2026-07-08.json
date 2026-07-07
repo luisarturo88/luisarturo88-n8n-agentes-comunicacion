@@ -1,0 +1,186 @@
+{
+  "agente": "Z.ai (Super Z)",
+  "timestamp": "2026-07-07T20:15:29.911049+00:00",
+  "tarea": "reparacion_critica_flujos_b1",
+  "resumen": "Reparacion completa del exceso de flujos activos y verificacion de B1",
+  "problema_encontrado": "Alberto activo 27 flujos (deberian ser ~10 B1), causando saturacion de APIs Google Sheets/Blogger",
+  "acciones_realizadas": [
+    {
+      "accion": "Desactivar 15 flujos exceso",
+      "detalle": "5 ACUARISMO (prompt VET incorrecto), 3 HUMAN/Bienestar, 7 VET B2/B3, 1 INFLAMACION schedule incorrecto"
+    },
+    {
+      "accion": "Desactivar FLUJO_VET_PRIMERA_PERSONA_V3",
+      "detalle": "Sin nodo AI generador - no puede producir contenido"
+    },
+    {
+      "accion": "Corregir schedule INFLAMACION BARRIGA",
+      "detalle": "19 horas -> 27 minutos para integrar en stagger B1"
+    },
+    {
+      "accion": "Verificar prompts B1",
+      "detalle": "Todos los flujos B1 tienen Prompt Maestro Dr. Luis Arturo Garcia con REGLAS DE ORO, EN ESTE ARTICULO, figcaption, APA, Nelson & Couto"
+    },
+    {
+      "accion": "Verificar nodos v1.7",
+      "detalle": "Todos los nodos Seleccionar y Adaptar Caso v1.7 estan deshabilitados (disabled=True)"
+    }
+  ],
+  "estado_final": {
+    "flujos_activos_totales": 11,
+    "flujos_b1_vet": 9,
+    "flujos_sistema": 2,
+    "stagger_minutos": [
+      20,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      41
+    ],
+    "flujos_b1_activos": [
+      {
+        "id": "MwA6MSqZnsdNqv5Y",
+        "name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXOTICAS",
+        "schedule": "20 min"
+      },
+      {
+        "id": "JDJKp1yYSFFu4BtV",
+        "name": "FLUJO VETERINARIO LUIS BLOGGER",
+        "schedule": "23 min"
+      },
+      {
+        "id": "cabjTOjqu7Ks1r58",
+        "name": "Veterinario ECUADOR Y MUNDO Luis Blogger copy",
+        "schedule": "25 min"
+      },
+      {
+        "id": "bssm7ANnpogoMt0V",
+        "name": "Inchazon de barriga SIN REPETICION DE TEMAS",
+        "schedule": "27 min"
+      },
+      {
+        "id": "930XCm4vY3TurOlL",
+        "name": "Veterinario QUITO Luis Blogger copy",
+        "schedule": "29 min"
+      },
+      {
+        "id": "1zGqGSPhZITvCttw",
+        "name": "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS",
+        "schedule": "31 min"
+      },
+      {
+        "id": "7554aQXudKBRWEkQ",
+        "name": "FLUJO VETERINARIO MILLONARIO - TECNOLOGIA",
+        "schedule": "33 min"
+      },
+      {
+        "id": "9KrKde8O3cijCcBf",
+        "name": "8 FLUJO VETERINARIA + CASOS ESTUDIOS (LISTO)",
+        "schedule": "35 min"
+      },
+      {
+        "id": "IyUZcl96GcRjVZF5",
+        "name": "FLUJO VETERINARIO MILLONARIO - 10 NICHOS MASCOTAS",
+        "schedule": "41 min"
+      }
+    ]
+  },
+  "flujos_desactivados": [
+    {
+      "id": "STiwKMm2UXn6jSfa",
+      "name": "ACUARIOS BIOTIPO",
+      "razon": "ACUARISMO - prompt VET incorrecto"
+    },
+    {
+      "id": "Xu385bbjE7JqapnW",
+      "name": "ACUARIOS BIOTOPO",
+      "razon": "ACUARISMO - prompt VET incorrecto"
+    },
+    {
+      "id": "7rdIEIngthCHxiHV",
+      "name": "PEZ BETTA",
+      "razon": "ACUARISMO - caso clinico en peces"
+    },
+    {
+      "id": "NiEeirlD1yI7zVhu",
+      "name": "PEZ Guppy",
+      "razon": "ACUARISMO - caso clinico en peces"
+    },
+    {
+      "id": "CZEzMQrOOA9UoWyn",
+      "name": "PEZ PLATY",
+      "razon": "ACUARISMO - caso clinico en peces"
+    },
+    {
+      "id": "UCXNMMBg1NZPmH5v",
+      "name": "1 FLUJO ANTI ESTRES MILLONARIO",
+      "razon": "HUMAN/Bienestar"
+    },
+    {
+      "id": "HtFV0KcqD42VqZvr",
+      "name": "FLUJO VET - ANSIEDAD Y ESTRES",
+      "razon": "HUMAN/Bienestar"
+    },
+    {
+      "id": "QtenfTotJPqU72x2",
+      "name": "KROMASOL SALUD",
+      "razon": "HUMAN/Bienestar"
+    },
+    {
+      "id": "aWuJN5aWVLfdrJAi",
+      "name": "ALIMENTOS PARA GATOS",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "DS5gqoroBG3SAXKB",
+      "name": "ALIMENTOS PARA PERROS",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "3TihmuY7TlK4NZSN",
+      "name": "BOVINOS",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "FNSqMpwphHB1w3WL",
+      "name": "BULLDOGS FLUJO",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "aqJQo8AEmxH4euHZ",
+      "name": "HURONES",
+      "razon": "VET B2/B3 + prompt bovino incorrecto"
+    },
+    {
+      "id": "AeGdjdxnXZThPmjE",
+      "name": "LOROS",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "EjgZ8uVfHQqzQqbF",
+      "name": "REPTILES",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "bDEvev5P1BC9MAPA",
+      "name": "mejorar articulos veterinario",
+      "razon": "VET B2/B3"
+    },
+    {
+      "id": "CDQHp2kdQszHYKqN",
+      "name": "FLUJO_VET_PRIMERA_PERSONA_V3",
+      "razon": "Sin nodo AI generador"
+    }
+  ],
+  "proximos_pasos": [
+    "Esperar primera ejecucion exitosa de B1 (20 min)",
+    "Verificar que los articulos se publican correctamente en Blogger",
+    "Aplicar N2-ENRIQUECEDOR SEO a los 8 flujos B1 restantes",
+    "Corregir prompts de flujos ACUARISMO/PECES (quitar caso clinico vet)",
+    "Implementar sistema anti-duplicados"
+  ]
+}
