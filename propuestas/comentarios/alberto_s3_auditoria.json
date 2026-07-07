@@ -1,0 +1,597 @@
+{
+  "agente": "Alberto",
+  "timestamp": "2026-07-07T13:04:08.736052+00:00",
+  "accion": "S3 - Auditoria de credenciales y modelos IA",
+  "subtarea_de": "orden_zai_fix_flujos_2026-07-07 (S3)",
+  "credentials_available": [
+    {
+      "id": "6LmusRbYdpPXTD10",
+      "name": "Cohere account",
+      "type": "cohereApi"
+    },
+    {
+      "id": "2VRVoufdAHdHIAdF",
+      "name": "Hugging Face account",
+      "type": "huggingFaceApi"
+    },
+    {
+      "id": "w46GoX6juzTGsMuQ",
+      "name": "VIDEOS N8N",
+      "type": "openAiApi"
+    },
+    {
+      "id": "bymbPFkIOlBNImRf",
+      "name": "OpenAi account",
+      "type": "openAiApi"
+    },
+    {
+      "id": "tNIbvUHUgCDukRly",
+      "name": "DeepSeek account",
+      "type": "deepSeekApi"
+    }
+  ],
+  "flows": [
+    {
+      "id": "JDJKp1yYSFFu4BtV",
+      "name": "FLUJO VETERINARIO LUIS BLOGGER",
+      "active": true,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "cabjTOjqu7Ks1r58",
+      "name": "Veterinario ECUADOR Y MUNDO Luis Blogger copy",
+      "active": true,
+      "agents": 3,
+      "models": 0,
+      "model_types": {}
+    },
+    {
+      "id": "930XCm4vY3TurOlL",
+      "name": "Veterinario QUITO Luis Blogger copy",
+      "active": true,
+      "agents": 3,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "cthc7GvuYZlPIDCI",
+      "name": "Veterinario CUENCA Luis Blogger copy",
+      "active": true,
+      "agents": 3,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "1zGqGSPhZITvCttw",
+      "name": "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS EN GATOS",
+      "active": true,
+      "agents": 2,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "7554aQXudKBRWEkQ",
+      "name": "FLUJO VETERINARIO MILLONARIO - TECNOLOGÍA",
+      "active": true,
+      "agents": 2,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "9KrKde8O3cijCcBf",
+      "name": "8 FLUJO VETERINARIA + CASOS ESTUDIOS (LISTO)",
+      "active": true,
+      "agents": 2,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "CDQHp2kdQszHYKqN",
+      "name": "FLUJO_VET_PRIMERA_PERSONA_V3",
+      "active": true,
+      "agents": 0,
+      "models": 0,
+      "model_types": {}
+    },
+    {
+      "id": "bDEvev5P1BC9MAPA",
+      "name": "mejorar articulos veterinario",
+      "active": true,
+      "agents": 5,
+      "models": 5,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 5
+      }
+    },
+    {
+      "id": "IyUZcl96GcRjVZF5",
+      "name": "FLUJO VETERINARIO MILLONARIO - 10 NICHOS MASCOTAS",
+      "active": true,
+      "agents": 2,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "HtFV0KcqD42VqZvr",
+      "name": "FLUJO VETERINARIO MILLONARIO - ANSIEDAD Y ESTRES",
+      "active": false,
+      "agents": 2,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "MwA6MSqZnsdNqv5Y",
+      "name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+      "active": false,
+      "agents": 2,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "FNSqMpwphHB1w3WL",
+      "name": "BULLDOGS FLUJO copy",
+      "active": false,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "AeGdjdxnXZThPmjE",
+      "name": "LOROS SIN REPETICION DE TEMAS copy copy",
+      "active": false,
+      "agents": 2,
+      "models": 3,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "aqJQo8AEmxH4euHZ",
+      "name": "HURONES SIN REPETICION DE TEMAS",
+      "active": false,
+      "agents": 2,
+      "models": 3,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "EjgZ8uVfHQqzQqbF",
+      "name": "REPTILES SIN REPETICION DE TEMAS",
+      "active": true,
+      "agents": 2,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "DS5gqoroBG3SAXKB",
+      "name": "ALIMENTOS PARA PERROS SIN REPETICION DE TEMAS",
+      "active": false,
+      "agents": 3,
+      "models": 3,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "aWuJN5aWVLfdrJAi",
+      "name": "ALIMENTOS PARA GATOS SIN REPETICION DE TEMAS copy copy",
+      "active": false,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "QtenfTotJPqU72x2",
+      "name": "KROMASOL SALUD",
+      "active": false,
+      "agents": 1,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "Xu385bbjE7JqapnW",
+      "name": "ACUARIOS BIOTOPO SIN REPETICION DE TEMAS",
+      "active": false,
+      "agents": 2,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+      }
+    },
+    {
+      "id": "STiwKMm2UXn6jSfa",
+      "name": "ACUARIOS BIOTIPO SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+      "active": false,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "7rdIEIngthCHxiHV",
+      "name": "PEZ BETTA REPETICION DE TEMAS copy LISTO",
+      "active": false,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "NiEeirlD1yI7zVhu",
+      "name": "PEZ Guppy REPETICION DE TEMAS copy LISTO copy",
+      "active": false,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "CZEzMQrOOA9UoWyn",
+      "name": "PEZ PLATY REPETICION DE TEMAS LISTO copy copy",
+      "active": false,
+      "agents": 3,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "3TihmuY7TlK4NZSN",
+      "name": "BOVINOS SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+      "active": false,
+      "agents": 2,
+      "models": 3,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "bssm7ANnpogoMt0V",
+      "name": "Inchazon de barriga SIN REPETICION DE TEMAS",
+      "active": false,
+      "agents": 1,
+      "models": 2,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    },
+    {
+      "id": "UCXNMMBg1NZPmH5v",
+      "name": "1 FLUJO ANTI ESTRES MILLONARIO",
+      "active": false,
+      "agents": 1,
+      "models": 1,
+      "model_types": {
+        "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+      }
+    }
+  ],
+  "hallazgos": {
+    "sin_modelos": [
+      {
+        "id": "cabjTOjqu7Ks1r58",
+        "name": "Veterinario ECUADOR Y MUNDO Luis Blogger copy",
+        "active": true,
+        "agents": 3,
+        "models": 0,
+        "model_types": {}
+      }
+    ],
+    "con_modelos": [
+      {
+        "id": "JDJKp1yYSFFu4BtV",
+        "name": "FLUJO VETERINARIO LUIS BLOGGER",
+        "active": true,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "930XCm4vY3TurOlL",
+        "name": "Veterinario QUITO Luis Blogger copy",
+        "active": true,
+        "agents": 3,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "cthc7GvuYZlPIDCI",
+        "name": "Veterinario CUENCA Luis Blogger copy",
+        "active": true,
+        "agents": 3,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "1zGqGSPhZITvCttw",
+        "name": "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS EN GATOS",
+        "active": true,
+        "agents": 2,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "7554aQXudKBRWEkQ",
+        "name": "FLUJO VETERINARIO MILLONARIO - TECNOLOGÍA",
+        "active": true,
+        "agents": 2,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "9KrKde8O3cijCcBf",
+        "name": "8 FLUJO VETERINARIA + CASOS ESTUDIOS (LISTO)",
+        "active": true,
+        "agents": 2,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "bDEvev5P1BC9MAPA",
+        "name": "mejorar articulos veterinario",
+        "active": true,
+        "agents": 5,
+        "models": 5,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 5
+        }
+      },
+      {
+        "id": "IyUZcl96GcRjVZF5",
+        "name": "FLUJO VETERINARIO MILLONARIO - 10 NICHOS MASCOTAS",
+        "active": true,
+        "agents": 2,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "HtFV0KcqD42VqZvr",
+        "name": "FLUJO VETERINARIO MILLONARIO - ANSIEDAD Y ESTRES",
+        "active": false,
+        "agents": 2,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "MwA6MSqZnsdNqv5Y",
+        "name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+        "active": false,
+        "agents": 2,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "FNSqMpwphHB1w3WL",
+        "name": "BULLDOGS FLUJO copy",
+        "active": false,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "AeGdjdxnXZThPmjE",
+        "name": "LOROS SIN REPETICION DE TEMAS copy copy",
+        "active": false,
+        "agents": 2,
+        "models": 3,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "aqJQo8AEmxH4euHZ",
+        "name": "HURONES SIN REPETICION DE TEMAS",
+        "active": false,
+        "agents": 2,
+        "models": 3,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "EjgZ8uVfHQqzQqbF",
+        "name": "REPTILES SIN REPETICION DE TEMAS",
+        "active": true,
+        "agents": 2,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "DS5gqoroBG3SAXKB",
+        "name": "ALIMENTOS PARA PERROS SIN REPETICION DE TEMAS",
+        "active": false,
+        "agents": 3,
+        "models": 3,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "aWuJN5aWVLfdrJAi",
+        "name": "ALIMENTOS PARA GATOS SIN REPETICION DE TEMAS copy copy",
+        "active": false,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "QtenfTotJPqU72x2",
+        "name": "KROMASOL SALUD",
+        "active": false,
+        "agents": 1,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "Xu385bbjE7JqapnW",
+        "name": "ACUARIOS BIOTOPO SIN REPETICION DE TEMAS",
+        "active": false,
+        "agents": 2,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1
+        }
+      },
+      {
+        "id": "STiwKMm2UXn6jSfa",
+        "name": "ACUARIOS BIOTIPO SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+        "active": false,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "7rdIEIngthCHxiHV",
+        "name": "PEZ BETTA REPETICION DE TEMAS copy LISTO",
+        "active": false,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "NiEeirlD1yI7zVhu",
+        "name": "PEZ Guppy REPETICION DE TEMAS copy LISTO copy",
+        "active": false,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "CZEzMQrOOA9UoWyn",
+        "name": "PEZ PLATY REPETICION DE TEMAS LISTO copy copy",
+        "active": false,
+        "agents": 3,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "3TihmuY7TlK4NZSN",
+        "name": "BOVINOS SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+        "active": false,
+        "agents": 2,
+        "models": 3,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 2,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "bssm7ANnpogoMt0V",
+        "name": "Inchazon de barriga SIN REPETICION DE TEMAS",
+        "active": false,
+        "agents": 1,
+        "models": 2,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatCohere (command-r-plus-08-2024)": 1,
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      },
+      {
+        "id": "UCXNMMBg1NZPmH5v",
+        "name": "1 FLUJO ANTI ESTRES MILLONARIO",
+        "active": false,
+        "agents": 1,
+        "models": 1,
+        "model_types": {
+          "@n8n/n8n-nodes-langchain.lmChatGoogleGemini (?)": 1
+        }
+      }
+    ]
+  }
+}
