@@ -1,0 +1,65 @@
+{
+  "agente": "Z.ai (Super Z)",
+  "fecha": "2026-07-07T18:57:41.865295+00:00",
+  "accion": "actualizacion_eeat_nicho",
+  "resumen": {
+    "vet_clausula_pureza_agregada": 22,
+    "humanos_corregidos": 2,
+    "saltados": 3,
+    "errores": 0
+  },
+  "flujos_veterinarios_con_clausula": [
+    "FLUJO VETERINARIO LUIS BLOGGER",
+    "Veterinario ECUADOR Y MUNDO",
+    "Veterinario QUITO",
+    "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS EN GATOS",
+    "FLUJO VETERINARIO MILLONARIO - TECNOLOGIA",
+    "8 FLUJO VETERINARIA + CASOS ESTUDIOS",
+    "mejorar articulos veterinario",
+    "FLUJO VETERINARIO MILLONARIO - 10 NICHOS MASCOTAS",
+    "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXOTICAS",
+    "BULLDOGS FLUJO copy",
+    "LOROS SIN REPETICION DE TEMAS",
+    "HURONES SIN REPETICION DE TEMAS",
+    "REPTILES SIN REPETICION DE TEMAS",
+    "ALIMENTOS PARA PERROS",
+    "ALIMENTOS PARA GATOS",
+    "ACUARIOS BIOTOPO",
+    "ACUARIOS BIOTIPO",
+    "PEZ BETTA",
+    "PEZ Guppy",
+    "PEZ PLATY",
+    "BOVINOS",
+    "Inchazon de barriga"
+  ],
+  "flujos_corregidos_humano": [
+    {
+      "id": "HtFV0KcqD42VqZvr",
+      "nombre": "FLUJO VETERINARIO MILLONARIO - ANSIEDAD Y ESTRES",
+      "accion": "Prompt reemplazado de VET a BIENESTAR HUMANO",
+      "blog_objetivo": "NO veterinarioluis.com (blog de bienestar humano)",
+      "razon": "Publica a blog diferente al vet, nombre enganoso"
+    },
+    {
+      "id": "UCXNMMBg1NZPmH5v",
+      "nombre": "1 FLUJO ANTI ESTRES MILLONARIO",
+      "accion": "Prompt reemplazado a BIENESTAR HUMANO",
+      "blog_objetivo": "Blog de bienestar (no vet)"
+    }
+  ],
+  "clausula_vet_inyectada": "CLAUSULA DE PUREZA DE NICHO (E-E-A-T VETERINARIA): Solo contenido veterinario. PROHIBIDO historias de pacientes humanos, derecho inmigracion, leyes USA. Casos de mascotas unicamente. Citas de libros vet. Autor: Dr. Luis Arturo Garcia.",
+  "clausula_humano_inyectada": "CLAUSULA DE PUREZA DE NICHO (E-E-A-T BIENESTAR HUMANO): Solo contenido de salud para personas. PROHIBIDO casos clinicos veterinarios, mascotas, dosis animales. Pacientes humanos con nombres ficticios. Citas de medicina humana, psicologia, OMS, NIH. Disclaimer medico obligatorio.",
+  "flujos_legales_verificados": {
+    "total": 6,
+    "todos_inactivos": true,
+    "sin_prompt_vet": true,
+    "lista": [
+      "Leads abogados",
+      "ABOGADOS BIENES RAICES",
+      "Asilo politico",
+      "Derechos laborales",
+      "Divorcio con hijos",
+      "ABOGADOS ACCIDENTE ORLANDO"
+    ]
+  }
+}
