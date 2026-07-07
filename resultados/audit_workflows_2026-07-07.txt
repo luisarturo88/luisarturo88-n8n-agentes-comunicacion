@@ -1,0 +1,188 @@
+AUDITORIA DE WORKFLOWS N8N - PROYECTO VETERINARIO
+Fecha: 2026-07-07 11:42:50 UTC
+================================================================================
+
+FLUJOS CON ERROR (32):
+------------------------------------------------------------
+  [JDJKp1yYSFFu4BtV] FLUJO VETERINARIO LUIS BLOGGER
+    Activo: SI | 24 nodos
+    Estado: ERROR: Error desconocido
+
+  [cabjTOjqu7Ks1r58] ECUADOR Y MUNDO
+    Activo: SI | 22 nodos
+    Estado: ERROR: Error desconocido
+
+  [930XCm4vY3TurOlL] QUITO
+    Activo: SI | 23 nodos
+    Estado: ERROR: Error desconocido
+
+  [cthc7GvuYZlPIDCI] CUENCA
+    Activo: SI | 23 nodos
+    Estado: ERROR: Error desconocido
+
+  [1zGqGSPhZITvCttw] RENALES Y URINARIOS
+    Activo: SI | 37 nodos
+    Estado: ERROR: Error desconocido
+
+  [7554aQXudKBRWEkQ] TECNOLOGIA
+    Activo: SI | 37 nodos
+    Estado: ERROR: Error desconocido
+
+  [9KrKde8O3cijCcBf] CASOS ESTUDIOS
+    Activo: SI | 45 nodos
+    Estado: ERROR: Error desconocido
+
+  [bDEvev5P1BC9MAPA] mejorar articulos
+    Activo: SI | 29 nodos
+    Estado: ERROR: Error desconocido
+
+  [IyUZcl96GcRjVZF5] 10 NICHOS MASCOTAS
+    Activo: SI | 35 nodos
+    Estado: ERROR: Error desconocido
+
+  [dAc6Uw37UeNLTshk] PRIMEROS AUXILIOS
+    Activo: SI | 37 nodos
+    Estado: ERROR: Error desconocido
+
+  [MwA6MSqZnsdNqv5Y] MASCOTAS EXOTICAS
+    Activo: SI | 36 nodos
+    Estado: ERROR: Error desconocido
+
+  [FNSqMpwphHB1w3WL] BULLDOGS
+    Activo: SI | 23 nodos
+    Estado: ERROR: Error desconocido
+
+  [AeGdjdxnXZThPmjE] LOROS
+    Activo: SI | 27 nodos
+    Estado: ERROR: Error desconocido
+
+  [aqJQo8AEmxH4euHZ] HURONES
+    Activo: SI | 28 nodos
+    Estado: ERROR: Error desconocido
+
+  [EjgZ8uVfHQqzQqbF] REPTILES
+    Activo: SI | 22 nodos
+    Estado: ERROR: Error desconocido
+
+  [DS5gqoroBG3SAXKB] ALIMENTOS PERROS
+    Activo: SI | 30 nodos
+    Estado: ERROR: Error desconocido
+
+  [aWuJN5aWVLfdrJAi] ALIMENTOS GATOS
+    Activo: SI | 28 nodos
+    Estado: ERROR: Error desconocido
+
+  [QtenfTotJPqU72x2] KROMASOL SALUD
+    Activo: SI | 16 nodos
+    Estado: ERROR: Error desconocido
+
+  [Xu385bbjE7JqapnW] ACUARIOS BIOTOPO (1)
+    Activo: SI | 22 nodos
+    Estado: ERROR: Error desconocido
+
+  [STiwKMm2UXn6jSfa] ACUARIOS BIOTOPO (2)
+    Activo: SI | 26 nodos
+    Estado: ERROR: Error desconocido
+
+  [7rdIEIngthCHxiHV] PEZ BETTA
+    Activo: SI | 37 nodos
+    Estado: ERROR: Error desconocido
+
+  [NiEeirlD1yI7zVhu] PEZ GUPPY
+    Activo: SI | 37 nodos
+    Estado: ERROR: Error desconocido
+
+  [CZEzMQrOOA9UoWyn] PEZ PLATY
+    Activo: SI | 37 nodos
+    Estado: ERROR: Error desconocido
+
+  [3TihmuY7TlK4NZSN] BOVINOS
+    Activo: SI | 28 nodos
+    Estado: ERROR: Error desconocido
+
+  [bssm7ANnpogoMt0V] INFLAMACION BARRIGA
+    Activo: NO | 26 nodos
+    Estado: ERROR: Error desconocido
+
+  [UCXNMMBg1NZPmH5v] ANTI ESTRES MILLONARIO
+    Activo: SI | 28 nodos
+    Estado: ERROR: Error desconocido
+
+  [Y1d5u1jRLpIIucFP] Difusion VET LUIS
+    Activo: NO | 11 nodos
+    Estado: ERROR: Error desconocido
+
+  [XGxDmDekWuuf6Bh5] Difusion BULLDOG
+    Activo: NO | 13 nodos
+    Estado: ERROR: Error desconocido
+
+  [u38gkCYPTAmHIg6v] GUAYAQUIL
+    Activo: NO | 23 nodos
+    Estado: ERROR: Error desconocido
+
+  [qVGiTwAGs0FYvqel] GECKO LEOPARDO
+    Activo: NO | 19 nodos
+    Estado: ERROR: Error desconocido
+
+  [mktnuZM2y9RJB1KF] CHINCHILLAS
+    Activo: NO | 25 nodos
+    Estado: ERROR: Error desconocido
+
+  [Xae4B5SXSbqHRPrl] Generador Temas Vet
+    Activo: SI | 30 nodos
+    Estado: ERROR: Error desconocido
+
+
+FLUJOS ACTIVOS (29):
+------------------------------------------------------------
+  ❌ [JDJKp1yYSFFu4BtV] FLUJO VETERINARIO LUIS BLOGGER - ERROR: Error desconocido
+  ❌ [cabjTOjqu7Ks1r58] ECUADOR Y MUNDO - ERROR: Error desconocido
+  ❌ [930XCm4vY3TurOlL] QUITO - ERROR: Error desconocido
+  ❌ [cthc7GvuYZlPIDCI] CUENCA - ERROR: Error desconocido
+  ❌ [1zGqGSPhZITvCttw] RENALES Y URINARIOS - ERROR: Error desconocido
+  ❌ [7554aQXudKBRWEkQ] TECNOLOGIA - ERROR: Error desconocido
+  ❌ [9KrKde8O3cijCcBf] CASOS ESTUDIOS - ERROR: Error desconocido
+  ✅ [CDQHp2kdQszHYKqN] PRIMERA_PERSONA_V3 - Success pero solo 0 nodos ejecutados (posible Date Gate vacio)
+  ❌ [bDEvev5P1BC9MAPA] mejorar articulos - ERROR: Error desconocido
+  ❌ [IyUZcl96GcRjVZF5] 10 NICHOS MASCOTAS - ERROR: Error desconocido
+  ✅ [HtFV0KcqD42VqZvr] ANSIEDAD Y ESTRES - Success pero solo 0 nodos ejecutados (posible Date Gate vacio)
+  ❌ [dAc6Uw37UeNLTshk] PRIMEROS AUXILIOS - ERROR: Error desconocido
+  ❌ [MwA6MSqZnsdNqv5Y] MASCOTAS EXOTICAS - ERROR: Error desconocido
+  ❌ [FNSqMpwphHB1w3WL] BULLDOGS - ERROR: Error desconocido
+  ❌ [AeGdjdxnXZThPmjE] LOROS - ERROR: Error desconocido
+  ❌ [aqJQo8AEmxH4euHZ] HURONES - ERROR: Error desconocido
+  ❌ [EjgZ8uVfHQqzQqbF] REPTILES - ERROR: Error desconocido
+  ❌ [DS5gqoroBG3SAXKB] ALIMENTOS PERROS - ERROR: Error desconocido
+  ❌ [aWuJN5aWVLfdrJAi] ALIMENTOS GATOS - ERROR: Error desconocido
+  ❌ [QtenfTotJPqU72x2] KROMASOL SALUD - ERROR: Error desconocido
+  ❌ [Xu385bbjE7JqapnW] ACUARIOS BIOTOPO (1) - ERROR: Error desconocido
+  ❌ [STiwKMm2UXn6jSfa] ACUARIOS BIOTOPO (2) - ERROR: Error desconocido
+  ❌ [7rdIEIngthCHxiHV] PEZ BETTA - ERROR: Error desconocido
+  ❌ [NiEeirlD1yI7zVhu] PEZ GUPPY - ERROR: Error desconocido
+  ❌ [CZEzMQrOOA9UoWyn] PEZ PLATY - ERROR: Error desconocido
+  ❌ [3TihmuY7TlK4NZSN] BOVINOS - ERROR: Error desconocido
+  ❌ [UCXNMMBg1NZPmH5v] ANTI ESTRES MILLONARIO - ERROR: Error desconocido
+  ❌ [bGA2HDjvFxzMZxYV] MASTER CONTROLLER - Sin ejecuciones
+  ❌ [Xae4B5SXSbqHRPrl] Generador Temas Vet - ERROR: Error desconocido
+
+FLUJOS INACTIVOS (19):
+------------------------------------------------------------
+  [bssm7ANnpogoMt0V] INFLAMACION BARRIGA
+  [Y1d5u1jRLpIIucFP] Difusion VET LUIS
+  [XGxDmDekWuuf6Bh5] Difusion BULLDOG
+  [u38gkCYPTAmHIg6v] GUAYAQUIL
+  [qVGiTwAGs0FYvqel] GECKO LEOPARDO
+  [mktnuZM2y9RJB1KF] CHINCHILLAS
+  [s2XOnc9fLNBUhsLo] ACUARIOS NANO
+  [uh5Kn8a2UIvPfnKF] ACUARIOS NANO SIN REP
+  [fBkP5sEIQ7JKhGcX] PEZ GUPPY (copia)
+  [lgAhSjkEykyFKo1U] AGRESIVIDAD Y COMPORTAMIENTO
+  [wQLfSnTyoeilGNYv] DERMATOLOGICOS
+  [mSi4D0qxaTRcZW4g] MODIFICAR DUPLICADOS
+  [o9peCrRCNhsQ5Hav] Enriquecer SEO
+  [rZR1t1PmbI7sZrln] CUENCA (copia)
+  [i8YvQa5hQZmVVeph] Generador Auto Contenido
+  [j2jVcQTUSO32R8EU] Generate Topics Bulldog
+  [xO7VskA1GXS8qyxr] MONETIZACION BLOGS
+  [JHHBn0oEDNFWSeHC] 02 Generate Veterinary Article
+  [mqRsiPlNHjoH5uG0] FLUJO 1 MEJORADO
