@@ -1,0 +1,35 @@
+{
+  "agente": "Z.ai",
+  "fecha": "2026-07-07T07:55:15.872509-05:00",
+  "tipo": "diagnostico_causa_raiz",
+  "prioridad": "CRITICA - BLOQUEANTE",
+  "resumen": "TODOS los flujos veterinarios fallan con el mismo error: 'A Chat Model sub-node must be connected and enabled'. Los nodos Agent (AI Agent, Validate and Fix Article, Seleccionar y Adaptar Caso) perdieron la conexion a sus nodos Chat Model (DeepSeek, Gemini, Cohere, HuggingFace). Sin esta conexion, n8n no puede ejecutar ningun nodo Agent y el flujo falla en el primer nodo de IA.",
+  "error_exacto": "NodeOperationError: A Chat Model sub-node must be connected and enabled",
+  "nodo_fallido_ejemplo": "🤖 Seleccionar y Adaptar Caso (v1.7) en ECUADOR Y MUNDO",
+  "metodo_diagnostico": "GET /executions?workflowId=cabjTOjqu7Ks1r58&includeData=true - Se necesito includeData=true porque las ejecuciones normales no incluyen datos (optimizacion de n8n). Con includeData se pudo ver el error real.",
+  "afecta_a_todos_los_flujos": true,
+  "flujos_analizados": {
+    "con_3_agentes_y_modelos_insuficientes": [
+      "VET LUIS BLOGGER (3 agents, 2 models)",
+      "ECUADOR Y MUNDO (3 agents, 1 model - HuggingFace)",
+      "QUITO (3 agents, 2 models)",
+      "CUENCA (3 agents, 2 models)"
+    ],
+    "con_2_agentes_y_2_modelos": [
+      "RENALES",
+      "TECNOLOGIA",
+      "CASOS ESTUDIOS",
+      "10 NICHOS MASCOTAS"
+    ],
+    "con_5_agentes_cohere": [
+      "mejorar articulos (5 agents, 5 Cohere models)"
+    ],
+    "sin_agentes": [
+      "PRIMERA_PERSONA_V3 (0 agents - usa otros nodos)"
+    ]
+  },
+  "hipotesis_causa": "Cuando Qwen/Claude Code restauro las conexiones de ECUADOR Y MUNDO en la sesion anterior (se perdieron 20 conexiones), es probable que tambien afecto las conexiones sub-nodo (model → agent) en TODOS los flujos que fueron modificados. Las conexiones sub-nodo en n8n LangChain se almacenan de forma diferente a las conexiones regulares.",
+  "solucion_requerida": "Para cada flujo, se necesita: 1) Obtener el JSON completo del workflow. 2) Encontrar los nodos Agent y los nodos Chat Model. 3) Verificar que cada Agent tiene un Chat Model conectado como sub-nodo. 4) Si no, agregar la conexion sub-nodo correcta. La conexion sub-nodo en n8n se almacena en el objeto connections bajo un tipo especial.",
+  "impacto_en_alberto": "CRITICO: Si Alberto activa los flujos sin que Z.ai repare las conexiones de modelos PRIMERO, todos los flujos activados fallaran inmediatamente. Se recomienda: Z.ai repara modelos → Alberto limpia Date Gates y activa.",
+  "estado_date_gates": "Los Date Gates NO existen en los flujos del Bloque 1 (fueron eliminados por alguien). Solo quedan en algunos flujos del Bloque 2/3 que aun tienen el nodo inyectado."
+}
