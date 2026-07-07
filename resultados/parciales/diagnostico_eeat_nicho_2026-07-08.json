@@ -1,0 +1,56 @@
+{
+  "agente": "Z.ai",
+  "timestamp": "2026-07-07T20:15:29.911049+00:00",
+  "tipo": "diagnostico_eeat_nicho",
+  "hallazgos": {
+    "flujos_vet_b1": {
+      "count": 9,
+      "prompt_status": "Prompt Maestro Dr. Luis Arturo Garcia presente en todos",
+      "elementos_verificados": [
+        "REGLAS DE ORO",
+        "EN ESTE ARTICULO",
+        "figcaption",
+        "APA",
+        "Nelson & Couto",
+        "WhatsApp",
+        "JSON-LD"
+      ],
+      "nodo_n2_enriquecedor": "Solo instalado en FLUJO VETERINARIO LUIS BLOGGER (piloto)"
+    },
+    "flujos_human_bienestar": {
+      "activos": 0,
+      "desactivados": 3,
+      "nombres": [
+        "1 FLUJO ANTI ESTRES MILLONARIO",
+        "FLUJO VET - ANSIEDAD Y ESTRES",
+        "KROMASOL SALUD"
+      ],
+      "prompt_status": "Correcto - usan 'Especialista en Bienestar Humano y Coach de Salud'",
+      "observacion": "Estos flujos NO tenian prompt vet. Tenian su propio prompt de bienestar humano."
+    },
+    "flujos_acuarismo": {
+      "activos": 0,
+      "desactivados": 5,
+      "problema_critico": "Flujos de BETTA, Guppy, Platy tenian 'CASO CLINICO VETERINARIO' en el prompt - contenido erroneo para peces",
+      "flujos_con_prompt_vet_incorrecto": [
+        "PEZ BETTA",
+        "PEZ Guppy",
+        "PEZ PLATY",
+        "ACUARIOS BIOTIPO",
+        "ACUARIOS BIOTOPO"
+      ],
+      "accion_requerida": "Reemplazar 'caso clinico' con 'caso de acuarismo' y citas vet con fuentes de ictiologia"
+    },
+    "flujos_con_prompt_nicho_incorrecto": {
+      "HURONES": "Tenia prompt de 'produccion bovina' - completamente incorrecto para hurones",
+      "LOROS": "Tenia prompt generico de loros (correcto para su nicho)",
+      "BULLDOGS": "Solo nodo editor, sin generador AI propio"
+    }
+  },
+  "recomendaciones": [
+    "Los 9 flujos B1 VET estan correctos con Prompt Maestro",
+    "Antes de activar B2, corregir prompts de ACUARISMO (quitar caso clinico vet)",
+    "Antes de activar flujos HUMAN, verificar que publican en blog correcto (no veterinarioluis.com)",
+    "HURONES necesita prompt specifico de animales exoticos, no bovinos"
+  ]
+}
