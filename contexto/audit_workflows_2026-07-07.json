@@ -1,0 +1,446 @@
+{
+  "summary": {
+    "total": 48,
+    "active": 29,
+    "inactive": 19,
+    "error_last": 32,
+    "success_last": 2,
+    "no_exec": 14,
+    "api_error": 0
+  },
+  "workflows": [
+    {
+      "id": "JDJKp1yYSFFu4BtV",
+      "name": "FLUJO VETERINARIO LUIS BLOGGER",
+      "active": true,
+      "nodes": 24,
+      "connections": 20,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:23:09.039Z"
+    },
+    {
+      "id": "cabjTOjqu7Ks1r58",
+      "name": "ECUADOR Y MUNDO",
+      "active": true,
+      "nodes": 22,
+      "connections": 19,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:25:09.145Z"
+    },
+    {
+      "id": "930XCm4vY3TurOlL",
+      "name": "QUITO",
+      "active": true,
+      "nodes": 23,
+      "connections": 19,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:29:37.026Z"
+    },
+    {
+      "id": "cthc7GvuYZlPIDCI",
+      "name": "CUENCA",
+      "active": true,
+      "nodes": 23,
+      "connections": 19,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:27:06.033Z"
+    },
+    {
+      "id": "1zGqGSPhZITvCttw",
+      "name": "RENALES Y URINARIOS",
+      "active": true,
+      "nodes": 37,
+      "connections": 34,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:31:47.045Z"
+    },
+    {
+      "id": "7554aQXudKBRWEkQ",
+      "name": "TECNOLOGIA",
+      "active": true,
+      "nodes": 37,
+      "connections": 34,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:33:46.065Z"
+    },
+    {
+      "id": "9KrKde8O3cijCcBf",
+      "name": "CASOS ESTUDIOS",
+      "active": true,
+      "nodes": 45,
+      "connections": 39,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:35:52.041Z"
+    },
+    {
+      "id": "CDQHp2kdQszHYKqN",
+      "name": "PRIMERA_PERSONA_V3",
+      "active": true,
+      "nodes": 24,
+      "connections": 23,
+      "last_execution_status": "Success pero solo 0 nodos ejecutados (posible Date Gate vacio)",
+      "last_execution_time": "2026-07-07T11:37:17.042Z"
+    },
+    {
+      "id": "bDEvev5P1BC9MAPA",
+      "name": "mejorar articulos",
+      "active": true,
+      "nodes": 29,
+      "connections": 21,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:39:49.025Z"
+    },
+    {
+      "id": "IyUZcl96GcRjVZF5",
+      "name": "10 NICHOS MASCOTAS",
+      "active": true,
+      "nodes": 35,
+      "connections": 32,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:41:05.027Z"
+    },
+    {
+      "id": "HtFV0KcqD42VqZvr",
+      "name": "ANSIEDAD Y ESTRES",
+      "active": true,
+      "nodes": 37,
+      "connections": 34,
+      "last_execution_status": "Success pero solo 0 nodos ejecutados (posible Date Gate vacio)",
+      "last_execution_time": "2026-07-07T10:00:32.044Z"
+    },
+    {
+      "id": "dAc6Uw37UeNLTshk",
+      "name": "PRIMEROS AUXILIOS",
+      "active": true,
+      "nodes": 37,
+      "connections": 34,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:40:22.031Z"
+    },
+    {
+      "id": "MwA6MSqZnsdNqv5Y",
+      "name": "MASCOTAS EXOTICAS",
+      "active": true,
+      "nodes": 36,
+      "connections": 33,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:40:28.041Z"
+    },
+    {
+      "id": "FNSqMpwphHB1w3WL",
+      "name": "BULLDOGS",
+      "active": true,
+      "nodes": 23,
+      "connections": 19,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:34:52.026Z"
+    },
+    {
+      "id": "AeGdjdxnXZThPmjE",
+      "name": "LOROS",
+      "active": true,
+      "nodes": 27,
+      "connections": 21,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:23:16.056Z"
+    },
+    {
+      "id": "aqJQo8AEmxH4euHZ",
+      "name": "HURONES",
+      "active": true,
+      "nodes": 28,
+      "connections": 22,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:34:50.037Z"
+    },
+    {
+      "id": "EjgZ8uVfHQqzQqbF",
+      "name": "REPTILES",
+      "active": true,
+      "nodes": 22,
+      "connections": 19,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:40:48.024Z"
+    },
+    {
+      "id": "DS5gqoroBG3SAXKB",
+      "name": "ALIMENTOS PERROS",
+      "active": true,
+      "nodes": 30,
+      "connections": 24,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:25:44.032Z"
+    },
+    {
+      "id": "aWuJN5aWVLfdrJAi",
+      "name": "ALIMENTOS GATOS",
+      "active": true,
+      "nodes": 28,
+      "connections": 23,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:29:57.098Z"
+    },
+    {
+      "id": "QtenfTotJPqU72x2",
+      "name": "KROMASOL SALUD",
+      "active": true,
+      "nodes": 16,
+      "connections": 14,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-06T22:00:41.270Z"
+    },
+    {
+      "id": "Xu385bbjE7JqapnW",
+      "name": "ACUARIOS BIOTOPO (1)",
+      "active": true,
+      "nodes": 22,
+      "connections": 19,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:23:50.025Z"
+    },
+    {
+      "id": "STiwKMm2UXn6jSfa",
+      "name": "ACUARIOS BIOTOPO (2)",
+      "active": true,
+      "nodes": 26,
+      "connections": 21,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:34:15.086Z"
+    },
+    {
+      "id": "7rdIEIngthCHxiHV",
+      "name": "PEZ BETTA",
+      "active": true,
+      "nodes": 37,
+      "connections": 32,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:34:26.060Z"
+    },
+    {
+      "id": "NiEeirlD1yI7zVhu",
+      "name": "PEZ GUPPY",
+      "active": true,
+      "nodes": 37,
+      "connections": 32,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:34:27.083Z"
+    },
+    {
+      "id": "CZEzMQrOOA9UoWyn",
+      "name": "PEZ PLATY",
+      "active": true,
+      "nodes": 37,
+      "connections": 35,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:25:34.047Z"
+    },
+    {
+      "id": "3TihmuY7TlK4NZSN",
+      "name": "BOVINOS",
+      "active": true,
+      "nodes": 28,
+      "connections": 22,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:34:38.024Z"
+    },
+    {
+      "id": "bssm7ANnpogoMt0V",
+      "name": "INFLAMACION BARRIGA",
+      "active": false,
+      "nodes": 26,
+      "connections": 25,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-06T22:00:38.129Z"
+    },
+    {
+      "id": "UCXNMMBg1NZPmH5v",
+      "name": "ANTI ESTRES MILLONARIO",
+      "active": true,
+      "nodes": 28,
+      "connections": 26,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T08:00:37.125Z"
+    },
+    {
+      "id": "Y1d5u1jRLpIIucFP",
+      "name": "Difusion VET LUIS",
+      "active": false,
+      "nodes": 11,
+      "connections": 8,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T10:20:22.034Z"
+    },
+    {
+      "id": "XGxDmDekWuuf6Bh5",
+      "name": "Difusion BULLDOG",
+      "active": false,
+      "nodes": 13,
+      "connections": 10,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T10:20:23.104Z"
+    },
+    {
+      "id": "bGA2HDjvFxzMZxYV",
+      "name": "MASTER CONTROLLER",
+      "active": true,
+      "nodes": 7,
+      "connections": 7,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "u38gkCYPTAmHIg6v",
+      "name": "GUAYAQUIL",
+      "active": false,
+      "nodes": 23,
+      "connections": 22,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T10:17:02.821Z"
+    },
+    {
+      "id": "qVGiTwAGs0FYvqel",
+      "name": "GECKO LEOPARDO",
+      "active": false,
+      "nodes": 19,
+      "connections": 18,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T10:17:53.126Z"
+    },
+    {
+      "id": "mktnuZM2y9RJB1KF",
+      "name": "CHINCHILLAS",
+      "active": false,
+      "nodes": 25,
+      "connections": 23,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T01:00:04.330Z"
+    },
+    {
+      "id": "s2XOnc9fLNBUhsLo",
+      "name": "ACUARIOS NANO",
+      "active": false,
+      "nodes": 19,
+      "connections": 18,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "uh5Kn8a2UIvPfnKF",
+      "name": "ACUARIOS NANO SIN REP",
+      "active": false,
+      "nodes": 14,
+      "connections": 13,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "fBkP5sEIQ7JKhGcX",
+      "name": "PEZ GUPPY (copia)",
+      "active": false,
+      "nodes": 27,
+      "connections": 26,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "Xae4B5SXSbqHRPrl",
+      "name": "Generador Temas Vet",
+      "active": true,
+      "nodes": 30,
+      "connections": 26,
+      "last_execution_status": "ERROR: Error desconocido",
+      "last_execution_time": "2026-07-07T11:30:39.101Z"
+    },
+    {
+      "id": "lgAhSjkEykyFKo1U",
+      "name": "AGRESIVIDAD Y COMPORTAMIENTO",
+      "active": false,
+      "nodes": 29,
+      "connections": 28,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "wQLfSnTyoeilGNYv",
+      "name": "DERMATOLOGICOS",
+      "active": false,
+      "nodes": 29,
+      "connections": 28,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "mSi4D0qxaTRcZW4g",
+      "name": "MODIFICAR DUPLICADOS",
+      "active": false,
+      "nodes": 8,
+      "connections": 7,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "o9peCrRCNhsQ5Hav",
+      "name": "Enriquecer SEO",
+      "active": false,
+      "nodes": 16,
+      "connections": 15,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "rZR1t1PmbI7sZrln",
+      "name": "CUENCA (copia)",
+      "active": false,
+      "nodes": 24,
+      "connections": 23,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "i8YvQa5hQZmVVeph",
+      "name": "Generador Auto Contenido",
+      "active": false,
+      "nodes": 5,
+      "connections": 4,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "j2jVcQTUSO32R8EU",
+      "name": "Generate Topics Bulldog",
+      "active": false,
+      "nodes": 3,
+      "connections": 2,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "xO7VskA1GXS8qyxr",
+      "name": "MONETIZACION BLOGS",
+      "active": false,
+      "nodes": 40,
+      "connections": 40,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "JHHBn0oEDNFWSeHC",
+      "name": "02 Generate Veterinary Article",
+      "active": false,
+      "nodes": 9,
+      "connections": 7,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    },
+    {
+      "id": "mqRsiPlNHjoH5uG0",
+      "name": "FLUJO 1 MEJORADO",
+      "active": false,
+      "nodes": 47,
+      "connections": 47,
+      "last_execution_status": "Sin ejecuciones",
+      "last_execution_time": null
+    }
+  ],
+  "timestamp": "2026-07-07T11:42:50.068631"
+}
