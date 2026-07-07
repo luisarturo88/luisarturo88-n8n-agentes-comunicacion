@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "agente": "Z.ai (Super Z)",
+    "fecha": "2026-07-07T17:03:52.602356+00:00",
+    "tarea": "sistema_anti_duplicados_blueprint",
+    "version": "1.0",
+    "estado": "LISTO_PARA_EJECUTAR",
+    "dependencias": [
+      "API key de n8n valida (actualmente expirada - 401)",
+      "Credencial Google Sheets UviJg5pB7TsCtYBk configurada en n8n",
+      "Hoja 'Control_Publicaciones' creada en spreadsheet 2772493032989228627"
+    ]
+  },
+  "resumen_ejecutivo": {
+    "problema": "Sin sistema anti-duplicados, los 10 flujos del Bloque 1 pueden generar articulos sobre el mismo tema simultaneamente, causando: (a) contenido duplicado en el blog, (b) desperdicio de API credits, (c) penalizacion SEO por contenido duplicado.",
+    "solucion": "Hoja de Google Sheets como registro centralizado con estados PENDIENTE → EN_PROCESO → PUBLICADO. Cada flujo consulta esta hoja antes de generar contenido.",
+    "mecanismo": "7 nodos nuevos por flujo: Function (generar ID) → Google Sheets Read (check duplicados) → IF (es duplicado?) → Google Sheets Append (registrar) → Google Sheets Update (cambiar estado) x3 (EN_PROCESO, PUBLICADO, RECHAZADO)",
+    "flujos_a_modificar": [
+      "VET LUIS BLOGGER",
+      "ECUADOR Y MUNDO",
+      "QUITO",
+      "CUENCA",
+      "RENALES Y URINARIOS",
+      "TECNOLOGIA",
+      "CASOS ESTUDIOS",
+      "10 NICHOS MASCOTAS"
+    ]
+  },
+  "paso_1_crear_hoja": {
+    "hoja_nombre": "Control_Publicaciones",
+    "descripcion": "Hoja maestra para prevenir duplicados entre flujos veterinarios",
+    "columnas": [
+      {
+        "col": "A",
+        "header": "ID_TEMA",
+        "tipo": "texto",
+        "descripcion": "Identificador unico del tema, formato: BLOQUE_FLUJO_FECHA_TEMA_HASH"
+      },
+      {
+        "col": "B",
+        "header": "FLUJO_ORIGEN",
+        "tipo": "texto",
+        "descripcion": "Nombre del flujo que genero el tema (ej: VET LUIS BLOGGER)"
+      },
+      {
+        "col": "C",
+        "header": "TEMA_TITULO",
+        "tipo": "texto",
+        "descripcion": "Titulo o tema del articulo propuesto"
+      },
+      {
+        "col": "D",
+        "header": "ESTADO",
+        "tipo": "lista",
+        "valores": [
+          "PENDIENTE",
+          "EN_PROCESO",
+          "PUBLICADO",
+          "RECHAZADO",
+          "DUPLICADO"
+        ],
+        "descripcion": "Estado actual del articulo"
+      },
+      {
+        "col": "E",
+        "header": "TIMESTAMP_PENDIENTE",
+        "tipo": "fecha_iso",
+        "descripcion": "Momento en que se propuso el tema"
+      },
+      {
+        "col": "F",
+        "header": "TIMESTAMP_EN_PROCESO",
+        "tipo": "fecha_iso",
+        "descripcion": "Momento en que un flujo tomo el tema para escribir"
+      },
+      {
+        "col": "G",
+        "header": "TIMESTAMP_PUBLICADO",
+        "tipo": "fecha_iso",
+        "descripcion": "Momento en que se publico en WordPress"
+      },
+      {
+        "col": "H",
+        "header": "POST_ID_WORDPRESS",
+        "tipo": "numero",
+        "descripcion": "ID del post en WordPress si fue publicado"
+      },
+      {
+        "col": "I",
+        "header": "URL_ARTICULO",
+        "tipo": "url",
+        "descripcion": "URL del articulo publicado"
+      },
+      {
+        "col": "J",
+        "header": "BLOQUE_TEMPORAL",
+        "tipo": "texto",
+        "descripcion": "1, 2 o 3 segun el bloque de stagger"
+      },
+      {
+        "col": "K",
+        "header": "SIMILITUD_HASH",
+        "tipo": "texto",
+        "descripcion": "Hash semantico del titulo para deteccion de near-duplicates"
+      },
+      {
+        "col": "L",
+        "header": "NOTAS",
+        "tipo": "texto",
+        "descripcion": "Notas adicionales o motivo de rechazo"
+      }
+    ],
+    "fila_encabezado": 1,
+    "rango_datos": "A2:L1000"
+  },
+  "paso_2_logica_deteccion": {
+    "tipo_nodo": "n8n-nodes-base.function",
+    "nombre_sugerido": "🔍 Check Anti-Duplicados",
+    "posicion": "DESPUES_DE_TOPIC_SELECTION, ANTES_DE_AI_AGENT",
+    "codigo_js": "// ============================================\n// ANTI-DUPLICADOS - Z.ai Implementation\n// Posicionarse en la hoja de control y verificar\n// que el tema no existe ya con estado PENDIENTE o EN_PROCESO\n// ============================================\n\nconst SPREADSHEET_ID = '2772493032989228627'; // Blog ID de Luis\nconst SHEET_NAME = 'Control_Publicaciones';\nconst HOJA_RANGO = 'A2:L1000';\n\n// Generar ID unico del tema\nconst topic = $json.topic || $json.tema || $json.titulo || 'sin-tema';\nconst flowName = $workflow.name || 'unknown';\nconst bloque = '1'; // Se actualiza segun el bloque activo\nconst fecha = new Date().toISOString().slice(0, 10);\nconst topicHash = topic.substring(0, 50).replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();\nconst idTema = `${bloque}_${flowName.replace(/\\s+/g, '_')}_${fecha}_${topicHash}`;\n\n// Agregar metadata al item\n$json._anti_dup = {\n  id_tema: idTema,\n  flujo_origen: flowName,\n  tema_titulo: topic,\n  bloque_temporal: bloque,\n  timestamp: new Date().toISOString()\n};\n\nreturn $json;"
+  },
+  "paso_3_plan_modificacion_flujos": {
+    "descripcion": "Modificaciones necesarias en cada flujo para integrar anti-duplicados",
+    "nuevos_nodos": [
+      {
+        "paso": 1,
+        "tipo": "n8n-nodes-base.function",
+        "nombre": "🔍 Check Anti-Duplicados",
+        "codigo": "// ============================================\n// ANTI-DUPLICADOS - Z.ai Implementation\n// Posicionarse en la hoja de control y verificar\n// que el tema no existe ya con estado PENDIENTE o EN_PROCESO\n// ============================================\n\nconst SPREADSHEET_ID = '2772493032989228627'; // Blog ID de Luis\nconst SHEET_NAME = 'Control_Publicaciones';\nconst HOJA_RANGO = 'A2:L1000';\n\n// Generar ID unico del tema\nconst topic = $json.topic || $json.tema || $json.titulo || 'sin-tema';\nconst flowName = $workflow.name || 'unknown';\nconst bloque = '1'; // Se actualiza segun el bloque activo\nconst fecha = new Date().toISOString().slice(0, 10);\nconst topicHash = topic.substring(0, 50).replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();\nconst idTema = `${bloque}_${flowName.replace(/\\s+/g, '_')}_${fecha}_${topicHash}`;\n\n// Agregar metadata al item\n$json._anti_dup = {\n  id_tema: idTema,\n  flujo_origen: flowName,\n  tema_titulo: topic,\n  bloque_temporal: bloque,\n  timestamp: new Date().toISOString()\n};\n\nreturn $json;",
+        "ubicacion": "Despues del nodo que selecciona el tema, antes del AI Agent"
+      },
+      {
+        "paso": 2,
+        "tipo": "n8n-nodes-base.googleSheets",
+        "nombre": "📖 Leer Estado Actual",
+        "operacion": "read",
+        "parametros": {
+          "spreadsheetId": "2772493032989228627",
+          "range": "Control_Publicaciones!A2:L1000",
+          "filters": {
+            "columna_D": [
+              "PENDIENTE",
+              "EN_PROCESO"
+            ],
+            "columna_C_similar": "$json._anti_dup.tema_titulo"
+          }
+        },
+        "ubicacion": "Despues de Check Anti-Duplicados"
+      },
+      {
+        "paso": 3,
+        "tipo": "n8n-nodes-base.if",
+        "nombre": "❓ Es Duplicado?",
+        "condiciones": {
+          "true_branch": "El tema ya existe con estado PENDIENTE o EN_PROCESO → SKIP (no generar articulo)",
+          "false_branch": "El tema es nuevo → CONTINUAR al AI Agent"
+        },
+        "logica_if": "={{ $json.existing_rows && $json.existing_rows.length > 0 ? true : false }}",
+        "ubicacion": "Despues de Leer Estado Actual"
+      },
+      {
+        "paso": 4,
+        "tipo": "n8n-nodes-base.googleSheets",
+        "nombre": "✍️ Registrar PENDIENTE",
+        "operacion": "append",
+        "parametros": {
+          "spreadsheetId": "2772493032989228627",
+          "range": "Control_Publicaciones!A:L",
+          "valores": [
+            "={{ $json._anti_dup.id_tema }}",
+            "={{ $json._anti_dup.flujo_origen }}",
+            "={{ $json._anti_dup.tema_titulo }}",
+            "PENDIENTE",
+            "={{ $json._anti_dup.timestamp }}",
+            "",
+            "",
+            "",
+            "",
+            "={{ $json._anti_dup.bloque_temporal }}",
+            "",
+            ""
+          ]
+        },
+        "ubicacion": "Rama FALSE del IF (tema nuevo), antes del AI Agent"
+      },
+      {
+        "paso": 5,
+        "tipo": "n8n-nodes-base.googleSheets",
+        "nombre": "🔄 Actualizar EN_PROCESO",
+        "operacion": "update",
+        "parametros": {
+          "spreadsheetId": "2772493032989228627",
+          "range": "Control_Publicaciones",
+          "condicion": "FILA donde ID_TEMA = $json._anti_dup.id_tema",
+          "columna_D": "EN_PROCESO",
+          "columna_F": "={{ new Date().toISOString() }}"
+        },
+        "ubicacion": "Despues del AI Agent (cuando el articulo se genera exitosamente)"
+      },
+      {
+        "paso": 6,
+        "tipo": "n8n-nodes-base.googleSheets",
+        "nombre": "✅ Actualizar PUBLICADO",
+        "operacion": "update",
+        "parametros": {
+          "spreadsheetId": "2772493032989228627",
+          "range": "Control_Publicaciones",
+          "condicion": "FILA donde ID_TEMA = $json._anti_dup.id_tema",
+          "columna_D": "PUBLICADO",
+          "columna_G": "={{ new Date().toISOString() }}",
+          "columna_H": "={{ $json.wordpress_post_id }}",
+          "columna_I": "={{ $json.wordpress_url }}"
+        },
+        "ubicacion": "Despues del nodo WordPress (cuando se publica exitosamente)"
+      },
+      {
+        "paso": 7,
+        "tipo": "n8n-nodes-base.googleSheets",
+        "nombre": "❌ Marcar RECHAZADO (on error)",
+        "operacion": "update",
+        "parametros": {
+          "spreadsheetId": "2772493032989228627",
+          "range": "Control_Publicaciones",
+          "condicion": "FILA donde ID_TEMA = $json._anti_dup.id_tema",
+          "columna_D": "RECHAZADO",
+          "columna_L": "Error: {{ $json.error_message }}"
+        },
+        "ubicacion": "Rama de error del flujo (Error Trigger)"
+      }
+    ],
+    "flujo_modificado_diagrama": "Topic → Check Anti-Dup → Leer Sheet → IF Duplicado? → [SI] Skip/Log → [NO] Registrar PENDIENTE → AI Agent → Actualizar EN_PROCESO → WordPress → Actualizar PUBLICADO"
+  },
+  "paso_4_script_ejecucion": {
+    "descripcion": "Script Python que aplica las modificaciones a los 8 flujos via API REST n8n",
+    "requisitos": [
+      "API key n8n valida",
+      "Python 3.12+ con requests",
+      "Los 8 flujos deben existir en n8n"
+    ],
+    "codigo_script": "VER archivo adjunto: scripts/zai_anti_dup_apply.py",
+    "nota": "Este script se ejecutara cuando el API de n8n este disponible"
+  },
+  "estimacion_impacto": {
+    "nodos_nuevos_por_flujo": 7,
+    "nodos_totales_a_agregar": 56,
+    "tiempo_estimado_ejecucion": "5-10 minutos con API valida",
+    "reduccion_duplicados_estimada": "95%+",
+    "overhead_por_ejecucion": "~2-3 segundos adicionales por articulo (2 llamadas a Sheets)"
+  },
+  "estados_posibles": {
+    "PENDIENTE": "Tema propuesto, ningun flujo lo esta procesando aun",
+    "EN_PROCESO": "Un flujo esta generando el articulo sobre este tema",
+    "PUBLICADO": "Articulo publicado exitosamente en WordPress",
+    "RECHAZADO": "El articulo fallo en generacion o publicacion",
+    "DUPLICADO": "Se detecto un tema similar ya existente - no se genero articulo"
+  },
+  "lock_mechanism": {
+    "tipo": "optimistic_locking",
+    "descripcion": "Cuando un flujo lee la hoja y no encuentra su tema, inmediatamente escribe PENDIENTE. Si otro flujo lee al mismo tiempo y tambien escribe PENDIENTE, el segundo escritor detecta la fila del primero via SIMILITUD_HASH y se marca como DUPLICADO.",
+    "alternativa_pessimistic": "Usar un nodo HTTP Request con PUT atomico a un endpoint de lock (requiere servidor intermedio)"
+  }
+}
