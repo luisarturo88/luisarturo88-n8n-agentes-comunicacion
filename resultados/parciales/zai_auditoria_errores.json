@@ -1,9 +1,14 @@
 {
   "agente": "Z.ai",
-  "tarea": "auditoria_errores + reparacion_modelos",
-  "fecha": "2026-07-07T08:12:58.780189-05:00",
+  "tarea": "auditoria_errores",
+  "fecha": "2026-07-07T08:21:39.476217-05:00",
   "estado": "completada",
-  "resumen": "Causa raiz: nodos Agent v1.7 no soportan conexiones ai_languageModel. Solucion: deshabilitar nodos v1.7 de casos clinicos, actualizar AI Agent principales de v1.7 a v3.1.",
-  "flujo_afectados_reparados": 27,
-  "prox_paso": "Verificar ejecucion exitosa, luego anti-duplicados"
+  "hallazgos": [
+    "Causa raiz 1: Nodos Agent v1.7 no soportan conexiones ai_languageModel sub-nodo",
+    "Causa raiz 2: Las conexiones modelo→agente ya fueron reparadas (por Alberto u otro agente)",
+    "Accion: Deshabilitar 27 nodos v1.7 'Seleccionar y Adaptar Caso' (no esenciales)",
+    "Accion: Actualizar 11 nodos 'AI Agent (DeepSeek)' de v1.7 a v3.1",
+    "Accion: Verificar que las conexiones ai_languageModel estan correctas en todos los flujos"
+  ],
+  "resultado": "Los flujos deberian funcionar ahora. Queda esperar la proxima ejecucion programada para confirmar. La funcionalidad de casos clinicos (v1.7) esta deshabilitada temporalmente."
 }
