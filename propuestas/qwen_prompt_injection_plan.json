@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "agente": "Z.ai (Super Z)",
+    "fecha": "2026-07-07T17:08:24.562961+00:00",
+    "tarea": "inyectar_system_prompt_qwen_8_secciones",
+    "version": "1.0",
+    "estado": "LISTO_PARA_EJECUTAR",
+    "dependencia_critica": "API key de n8n valida (actualmente retorna 401)"
+  },
+  "resumen": {
+    "estado_actual": "25 flujos tienen la version de Z.ai (6 secciones) inyectada en sesion anterior",
+    "objetivo": "Reemplazar el suffix de 6 secciones con la version completa de 8 secciones de Qwen",
+    "secciones_adicionales": [
+      {
+        "numero": 8,
+        "nombre": "IMAGENES",
+        "contenido": "Sugiere 2-3 imagenes tematicas con descripciones ALT optimizadas para SEO. Si el flujo tiene nodo de imagen (Pexels/Pixabay), asegura que el prompt de busque use terminos veterinarios precisos.",
+        "impacto": "Mejora posicionamiento SEO por imagenes y ricas descripciones ALT"
+      }
+    ],
+    "mejoras_en_secciones_existentes": [
+      "Caso Clinico: Qwen requiere detalle de signos, diagnostico diferencial, pruebas y tratamiento",
+      "Bibliografia: Qwen lista 4 libros de referencia obligatoria especificos",
+      "Afiliados: Qwen pide 2-3 productos con tono de recomendacion profesional",
+      "SEO: Qwen especifica JSON-LD tipo Article O FAQPage",
+      "Tono Humano: Qwen lo separa como seccion propia con storytelling emocional",
+      "WhatsApp: Qwen da formato de bloque destacado"
+    ]
+  },
+  "comparacion_detallada": {
+    "seccion": {
+      "Caso Clinico": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen requiere caso MAS detallado (signos, diagnostico diferencial, pruebas, tratamiento)"
+      },
+      "Glosario Veterinario": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen agrega ejemplo especifico de uso en contexto (poliuria/polidipsia)"
+      },
+      "Bibliografia APA": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen lista 4 libros de referencia obligatoria (Nelson & Couto, Greene, August, Merck)"
+      },
+      "Afiliados/CTA": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen pide 2-3 productos (Z.ai pide 1-2) y tono de recomendacion profesional especifico"
+      },
+      "SEO y Estructura": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen especifica JSON-LD tipo Article O FAQPage; pide 1500-2500 palabras (Z.ai: 1500 min)"
+      },
+      "Tono Humano": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen lo separa como seccion propia con storytelling emocional; Z.ai lo incluye dentro de SEO"
+      },
+      "WhatsApp CTA": {
+        "zai": true,
+        "qwen": true,
+        "diferencia": "Qwen da formato de bloque destacado con texto introductorio; Z.ai es mas simple"
+      },
+      "IMAGENES": {
+        "zai": false,
+        "qwen": true,
+        "diferencia": "NO EXISTE en version Z.ai. Qwen pide 2-3 imagenes con ALT SEO y prompt veterinario preciso."
+      }
+    }
+  },
+  "flujos_objetivo": {
+    "ya_tienen_version_zai": 25,
+    "sin_prompt_detectado": 3,
+    "total_a_actualizar": 25,
+    "ids": [
+      "JDJKp1yYSFFu4BtV",
+      "cabjTOjqu7Ks1r58",
+      "930XCm4vY3TurOlL",
+      "cthc7GvuYZlPIDCI",
+      "1zGqGSPhZITvCttw",
+      "7554aQXudKBRWEkQ",
+      "9KrKde8O3cijCcBf",
+      "bDEvev5P1BC9MAPA",
+      "IyUZcl96GcRjVZF5",
+      "HtFV0KcqD42VqZvr",
+      "dAc6Uw37UeNLTshk",
+      "MwA6MSqZnsdNqv5Y",
+      "FNSqMpwphHB1w3WL",
+      "AeGdjdxnXZThPmjE",
+      "aqJQo8AEmxH4euHZ",
+      "EjgZ8uVfHQqzQqbF",
+      "DS5gqoroBG3SAXKB",
+      "aWuJN5aWVLfdrJAi",
+      "Xu385bbjE7JqapnW",
+      "STiwKMm2UXn6jSfa",
+      "7rdIEIngthCHxiHV",
+      "NiEeirlD1yI7zVhu",
+      "CZEzMQrOOA9UoWyn",
+      "3TihmuY7TlK4NZSN",
+      "bssm7ANnpogoMt0V"
+    ],
+    "sin_prompt": [
+      {
+        "id": "CDQHp2kdQszHYKqN",
+        "nombre": "FLUJO_VET_PRIMERA_PERSONA_V3",
+        "razon": "No tiene nodos AI con system prompt"
+      },
+      {
+        "id": "QtenfTotJPqU72x2",
+        "nombre": "KROMASOL SALUD",
+        "razon": "No tiene nodos AI con system prompt"
+      },
+      {
+        "id": "UCXNMMBg1NZPmH5v",
+        "nombre": "1 FLUJO ANTI ESTRES MILLONARIO",
+        "razon": "No tiene nodos AI con system prompt"
+      }
+    ]
+  },
+  "script_ejecucion": {
+    "descripcion": "Script Python que reemplaza suffix 6 secciones -> 8 secciones via API REST n8n",
+    "ubicacion_github": "scripts/zai_inject_qwen_prompt.py",
+    "codigo": "#!/usr/bin/env python3\n\"\"\"\nEjecutar cuando API key de n8n este disponible.\nReemplaza el suffix de Z.ai (6 secciones) con la version completa de Qwen (8 secciones).\n\"\"\"\nimport requests, json, copy\n\nN8N_BASE = \"https://vmi3096105.contaboserver.net/api/v1\"\nAPI_KEY = \"REEMPLAZAR_CON_API_KEY_VALIDA\"\nheaders = {\"X-N8N-API-KEY\": API_KEY, \"Accept\": \"application/json\", \"Content-Type\": \"application/json\"}\n\nREAD_ONLY = ['id','createdAt','updatedAt','versionId','activeVersionId','triggerCount',\n             'shared','activeVersion','tags','pinData','meta','staticData','versionCounter',\n             'active','isArchived']\n\n# El marcador que identifica que ya tiene la version vieja de Z.ai\nMARCADOR_VIEJO = \"CASO CLINICO VETERINARIO\"  # Linea que inicia el suffix de Z.ai\nMARCADOR_NUEVO = \"CASO CLINICO INTEGRADO\"     # Linea que inicia el suffix de Qwen\n\n# Suffix completo de Qwen (8 secciones) - se REEMPLAZA el suffix viejo\nQWEN_SUFFIX = \"\"\"\n\n---\n\n## REQUISITOS OBLIGATORIOS DE ESTRUCTURA Y CONTENIDO:\n\n1. **CASO CLINICO INTEGRADO**:\n   - Inicia o intercala en el articulo un caso clinico real o hipotetico detallado.\n   - Describe signos clinicos, diagnostico diferencial, pruebas realizadas y tratamiento.\n\n2. **GLOSARIO MEDICO VETERINARIO**:\n   - Debes usar terminos tecnicos profesionales (ej: nefropatia, prurito, disnea, profilaxis, etiologia).\n   - INMEDIATAMENTE despues de usar el termino, explica su significado de forma accesible.\n\n3. **BIBLIOGRAFIA CIENTIFICA APA**:\n   - Intercala citas de libros y revistas veterinarias reales dentro de los parrafos.\n   - Al final del articulo, incluye una seccion \"Bibliografia Consultada\" con 3-5 referencias en formato APA.\n   - Libros de referencia: Nelson & Couto, Greene, August, Merck Veterinary Manual.\n\n4. **MONETIZACION Y AFILIADOS**:\n   - Inserta estrategicamente 2-3 recomendaciones de productos de Amazon/Hotmart relacionados con el tema.\n   - Usa tono de recomendacion profesional.\n\n5. **OPTIMIZACION SEO, AEO Y RICH SNIPPETS**:\n   - Usa etiquetas HTML: <h1>, <h2>, <h3> correctamente jerarquizadas.\n   - Incluye FAQ con 3-5 preguntas al final.\n   - Genera bloque JSON-LD de tipo Article o FAQPage para rich snippets.\n   - Longitud: 1500-2500 palabras minimo.\n\n6. **TONO HUMANO (Human Level)**:\n   - Escribe con empatia, evita frases roboticas como \"En conclusion\".\n   - Usa storytelling en el caso clinico para generar conexion emocional.\n\n7. **LLAMADO A LA ACCION - COMUNIDAD WHATSAPP**:\n   Al final del articulo, inserta:\n   ?Necesitas orientacion veterinaria personalizada?\n   Unete a nuestra Comunidad Exclusiva de WhatsApp donde compartimos casos, consejos y respondemos dudas.\n   [HAZ CLIC AQUI PARA UNIRTE](https://chat.whatsapp.com/IkpYnlrPyEx8Y2NTyaFB6P)\n\n8. **IMAGENES**:\n   - Sugiere 2-3 imagenes tematicas con descripciones ALT optimizadas para SEO.\n   - Si el flujo tiene nodo de imagen, asegura prompt con terminos veterinarios precisos.\n\n## FORMATO DE SALIDA:\n- HTML limpio, listo para publicar en Blogger. Sin markdown.\n- Titulo atractivo con palabras clave principales.\n\n## NOTA CRITICA:\nSi el tema es sobre una patologia, SIEMPRE menciona cuando es una emergencia veterinaria que requiere atencion inmediata.\"\"\"\n\ndef clean_for_update(detail):\n    d = dict(detail)\n    d['description'] = d.get('description') or ''\n    for f in READ_ONLY:\n        d.pop(f, None)\n    if 'settings' in d:\n        ok = ['executionOrder','saveManualExecutions','saveExecutionProgress',\n              'executionTimeout','callerPolicy','errorWorkflow','crashOnError']\n        d['settings'] = {k:v for k,v in d['settings'].items() if k in ok}\n    return d\n\nALL_VET_FLOWS = [\n    \"JDJKp1yYSFFu4BtV\", \"cabjTOjqu7Ks1r58\", \"930XCm4vY3TurOlL\",\n    \"cthc7GvuYZlPIDCI\", \"1zGqGSPhZITvCttw\", \"7554aQXudKBRWEkQ\",\n    \"9KrKde8O3cijCcBf\", \"bDEvev5P1BC9MAPA\", \"IyUZcl96GcRjVZF5\",\n    \"HtFV0KcqD42VqZvr\", \"dAc6Uw37UeNLTshk\", \"MwA6MSqZnsdNqv5Y\",\n    \"FNSqMpwphHB1w3WL\", \"AeGdjdxnXZThPmjE\", \"aqJQo8AEmxH4euHZ\",\n    \"EjgZ8uVfHQqzQqbF\", \"DS5gqoroBG3SAXKB\", \"aWuJN5aWVLfdrJAi\",\n    \"Xu385bbjE7JqapnW\", \"STiwKMm2UXn6jSfa\", \"7rdIEIngthCHxiHV\",\n    \"NiEeirlD1yI7zVhu\", \"CZEzMQrOOA9UoWyn\", \"3TihmuY7TlK4NZSN\",\n    \"bssm7ANnpogoMt0V\"\n]\n\nresults = {\"updated\": [], \"skipped\": [], \"errors\": []}\n\nfor wid in ALL_VET_FLOWS:\n    try:\n        r = requests.get(f\"{N8N_BASE}/workflows/{wid}\", headers=headers, timeout=15)\n        if r.status_code != 200:\n            results[\"errors\"].append(f\"{wid}: get {r.status_code}\")\n            continue\n\n        wdata = r.json()\n        wname = wdata.get('name', '?')\n        nodes = wdata.get('nodes', [])\n        modified = False\n\n        for node in nodes:\n            ntype = node.get('type', '').lower()\n            params = node.get('parameters', {})\n\n            # Find system message in various locations\n            sys_val = None\n            sys_location = None\n\n            if 'agent' in ntype and 'systemMessage' in params:\n                sys_val = params['systemMessage']\n                sys_location = ('parameters', 'systemMessage')\n            elif 'options' in params and isinstance(params['options'], dict):\n                if 'systemMessage' in params['options']:\n                    sys_val = params['options']['systemMessage']\n                    sys_location = ('parameters', 'options', 'systemMessage')\n\n            if not sys_val or not isinstance(sys_val, str):\n                continue\n\n            # Check if it has the old Z.ai suffix\n            if MARCADOR_VIEJO in sys_val and MARCADOR_NUEVO not in sys_val:\n                # Find where the old suffix starts and replace\n                idx = sys_val.find(MARCADOR_VIEJO)\n                # Look for the separator before it\n                sep_idx = sys_val.rfind(\"---\", 0, idx)\n                if sep_idx >= 0:\n                    new_prompt = sys_val[:sep_idx] + QWEN_SUFFIX\n                else:\n                    new_prompt = sys_val[:idx] + QWEN_SUFFIX\n\n                # Apply the update\n                if len(sys_location) == 2:\n                    node[sys_location[1]] = new_prompt\n                elif len(sys_location) == 3:\n                    node[sys_location[1]][sys_location[2]] = new_prompt\n\n                modified = True\n                print(f\"  OK {wname} | {node['name']}: suffix reemplazado (6 -> 8 secciones)\")\n            elif MARCADOR_NUEVO in sys_val:\n                print(f\"  SKIP {wname} | {node['name']}: ya tiene version Qwen\")\n\n        if modified:\n            clean_data = clean_for_update(wdata)\n            r2 = requests.put(f\"{N8N_BASE}/workflows/{wid}\", headers=headers, json=clean_data, timeout=30)\n            if r2.status_code == 200:\n                results[\"updated\"].append(f\"{wid}: {wname}\")\n            else:\n                results[\"errors\"].append(f\"{wid}: put {r2.status_code}\")\n        else:\n            results[\"skipped\"].append(f\"{wid}: {wname}\")\n\n    except Exception as e:\n        results[\"errors\"].append(f\"{wid}: {e}\")\n\nprint(f\"\\nRESUMEN: Actualizados={len(results['updated'])}, Saltados={len(results['skipped'])}, Errores={len(results['errors'])}\")\nwith open('/home/z/my-project/scripts/qwen_prompt_update_results.json', 'w') as f:\n    json.dump(results, f, indent=2)\n",
+    "instrucciones": [
+      "1. Obtener API key valida de n8n",
+      "2. Reemplazar REEMPLAZAR_CON_API_KEY_VALIDA en el script",
+      "3. Ejecutar: python zai_inject_qwen_prompt.py",
+      "4. Verificar resultados en qwen_prompt_update_results.json"
+    ]
+  },
+  "estimacion": {
+    "flujos_a_modificar": 25,
+    "nodos_ai_por_flujo_promedio": 2.7,
+    "nodos_ai_totales_a_actualizar": "~68",
+    "tiempo_estimado": "3-5 minutos con API valida",
+    "riesgo": "BAJO - solo reemplaza un suffix por otro, no toca la estructura del flujo"
+  }
+}
