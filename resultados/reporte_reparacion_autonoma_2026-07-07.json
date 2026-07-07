@@ -1,5 +1,206 @@
 {
-  "fecha": "2026-07-07 19:41:12",
-  "total_analizados": 0,
-  "detalles": []
+  "fecha": "2026-07-07 19:42:51",
+  "total_analizados": 25,
+  "detalles": [
+    {
+      "workflow_id": "MwA6MSqZnsdNqv5Y",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+      "execution_id": "117496",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "EjgZ8uVfHQqzQqbF",
+      "workflow_name": "REPTILES SIN REPETICION DE TEMAS",
+      "execution_id": "117495",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "bDEvev5P1BC9MAPA",
+      "workflow_name": "MEJORAR ARTICULOS VETERINARIO",
+      "execution_id": "117494",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "3TihmuY7TlK4NZSN",
+      "workflow_name": "BOVINOS SIN REPETICION DE TEMAS COPY COPY COPY COPY COPY COPY",
+      "execution_id": "117491",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "qVGiTwAGs0FYvqel",
+      "workflow_name": "GECKO LEOPARDO SIN REPETICION DE TEMAS COPY COPY COPY COPY COPY",
+      "execution_id": "117490",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "aqJQo8AEmxH4euHZ",
+      "workflow_name": "HURONES SIN REPETICION DE TEMAS",
+      "execution_id": "117489",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "7rdIEIngthCHxiHV",
+      "workflow_name": "PEZ BETTA REPETICION DE TEMAS COPY LISTO",
+      "execution_id": "117488",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "FNSqMpwphHB1w3WL",
+      "workflow_name": "BULLDOGS FLUJO COPY",
+      "execution_id": "117487",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "STiwKMm2UXn6jSfa",
+      "workflow_name": "ACUARIOS BIOTIPO SIN REPETICION DE TEMAS COPY COPY COPY COPY COPY COPY",
+      "execution_id": "117486",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "NiEeirlD1yI7zVhu",
+      "workflow_name": "PEZ GUPPY REPETICION DE TEMAS COPY LISTO COPY",
+      "execution_id": "117485",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "7554aQXudKBRWEkQ",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - TECNOLOGÍA",
+      "execution_id": "117484",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "1zGqGSPhZITvCttw",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS EN GATOS",
+      "execution_id": "117483",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "930XCm4vY3TurOlL",
+      "workflow_name": "VETERINARIO QUITO LUIS BLOGGER COPY",
+      "execution_id": "117482",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "aWuJN5aWVLfdrJAi",
+      "workflow_name": "ALIMENTOS PARA GATOS SIN REPETICION DE TEMAS COPY COPY",
+      "execution_id": "117481",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "cthc7GvuYZlPIDCI",
+      "workflow_name": "VETERINARIO CUENCA LUIS BLOGGER COPY",
+      "execution_id": "117480",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "DS5gqoroBG3SAXKB",
+      "workflow_name": "ALIMENTOS PARA PERROS SIN REPETICION DE TEMAS",
+      "execution_id": "117479",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "cabjTOjqu7Ks1r58",
+      "workflow_name": "VETERINARIO ECUADOR Y MUNDO LUIS BLOGGER COPY",
+      "execution_id": "117478",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "CZEzMQrOOA9UoWyn",
+      "workflow_name": "PEZ PLATY REPETICION DE TEMAS LISTO COPY COPY",
+      "execution_id": "117477",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "JDJKp1yYSFFu4BtV",
+      "workflow_name": "FLUJO VETERINARIO LUIS BLOGGER",
+      "execution_id": "117476",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "Xu385bbjE7JqapnW",
+      "workflow_name": "ACUARIOS BIOTOPO SIN REPETICION DE TEMAS",
+      "execution_id": "117475",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "AeGdjdxnXZThPmjE",
+      "workflow_name": "LOROS SIN REPETICION DE TEMAS COPY COPY",
+      "execution_id": "117474",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "MwA6MSqZnsdNqv5Y",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+      "execution_id": "117473",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "EjgZ8uVfHQqzQqbF",
+      "workflow_name": "REPTILES SIN REPETICION DE TEMAS",
+      "execution_id": "117472",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "3TihmuY7TlK4NZSN",
+      "workflow_name": "BOVINOS SIN REPETICION DE TEMAS COPY COPY COPY COPY COPY COPY",
+      "execution_id": "117471",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    },
+    {
+      "workflow_id": "qVGiTwAGs0FYvqel",
+      "workflow_name": "GECKO LEOPARDO SIN REPETICION DE TEMAS COPY COPY COPY COPY COPY",
+      "execution_id": "117470",
+      "diagnostico_causa_raiz": "Desconocido",
+      "accion_tomada": "Ninguna",
+      "estado": "No requerida / No soportada"
+    }
+  ]
 }
