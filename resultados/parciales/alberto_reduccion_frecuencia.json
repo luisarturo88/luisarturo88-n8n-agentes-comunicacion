@@ -1,0 +1,163 @@
+{
+  "agente": "Alberto",
+  "tarea": "reduccion_frecuencia_schedules",
+  "fecha": "2026-07-07T23:20:00Z",
+  "diagnostico": {
+    "causa_error_masivo": "Cuota de API de Blogger agotada (Resource has been exhausted (e.g. check quota))",
+    "detalle": "Al activar 27+ flujos con schedules cada ~20-40min, se superó el límite diario de Google Blogger API (~10,000 requests). No es error de configuración - las reparaciones anteriores (Agent params, conexiones, timeout) están intactas."
+  },
+  "acciones": [
+    "Reducidos schedules de 29 flujos veterinarios: de ~20-40min a 4h (alta prioridad), 6h (media), 12h (baja)",
+    "Reactivados 16 flujos que el MASTER CONTROLLER había desactivado por errores recurrentes",
+    "Consumo diario estimado: ~90 posts/día (vs límite de ~10,000)"
+  ],
+  "flujos_actualizados": [
+    {
+      "id": "JDJKp1yYSFFu4BtV",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "1zGqGSPhZITvCttw",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "7554aQXudKBRWEkQ",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "9KrKde8O3cijCcBf",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "IyUZcl96GcRjVZF5",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "MwA6MSqZnsdNqv5Y",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "HtFV0KcqD42VqZvr",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "dAc6Uw37UeNLTshk",
+      "schedule": "4h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "cabjTOjqu7Ks1r58",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "930XCm4vY3TurOlL",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "cthc7GvuYZlPIDCI",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "FNSqMpwphHB1w3WL",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "bDEvev5P1BC9MAPA",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "QtenfTotJPqU72x2",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "UCXNMMBg1NZPmH5v",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "CDQHp2kdQszHYKqN",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "bssm7ANnpogoMt0V",
+      "schedule": "6h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "AeGdjdxnXZThPmjE",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "aqJQo8AEmxH4euHZ",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "EjgZ8uVfHQqzQqbF",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "DS5gqoroBG3SAXKB",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "aWuJN5aWVLfdrJAi",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "Xu385bbjE7JqapnW",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "STiwKMm2UXn6jSfa",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "7rdIEIngthCHxiHV",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "NiEeirlD1yI7zVhu",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "CZEzMQrOOA9UoWyn",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "3TihmuY7TlK4NZSN",
+      "schedule": "12h",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "Xae4B5SXSbqHRPrl",
+      "schedule": "6h",
+      "estado": "INACTIVO (error 400 al activar)"
+    }
+  ],
+  "total_activos": 30,
+  "nota": "Los flujos seguirán fallando hasta que la cuota de Blogger se resetee (medianoche PT ~07:00 UTC). Con los nuevos schedules (~90 posts/día) no debería volver a agotarse."
+}
