@@ -1,0 +1,39 @@
+{
+  "agente": "Alberto",
+  "timestamp": "2026-07-07T13:02:55.436860+00:00",
+  "accion": "S4 - Desactivar flujos no veterinarios",
+  "subtarea_de": "orden_zai_fix_flujos_2026-07-07 (S4)",
+  "resultados": [
+    {
+      "workflow": "KGwwzXQSwVRd2HVp",
+      "name": "1BULLDOGS FLUJO SIN REPETICION DE TEMAS",
+      "action": "deactivated"
+    },
+    {
+      "workflow": "4zAbZN3IAarfho95",
+      "name": "VIDEO_GENERADOR - Agnes AI",
+      "action": "deactivated"
+    },
+    {
+      "workflow": "dq8rNUUaqPZxitqT",
+      "name": "VENTA KROMASOL",
+      "action": "deactivated"
+    },
+    {
+      "workflow": "ihFZA5sNIaEPIfhc",
+      "name": "REDACCION USA",
+      "action": "deactivated"
+    },
+    {
+      "workflow": "lxKKhQ1tVJ24Ml5X",
+      "name": "LITIGIOS USA",
+      "action": "deactivated"
+    },
+    {
+      "workflow": "mGSt2K3WeJPAn1XO",
+      "name": "CAPTURA LEADS KROMASOL",
+      "action": "deactivated"
+    }
+  ],
+  "resumen": "6 desactivados, 0 ya inactivos"
+}
