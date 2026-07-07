@@ -1,7 +1,1 @@
-{
-  "agente": "Alberto",
-  "tarea": "Limpieza DATE GATES + Activacion Masiva",
-  "inicio": "2026-07-07T12:52:46.847561+00:00",
-  "status": "EN_PROCESO",
-  "flujos_objetivo": 27
-}
+{"agente": "Alberto", "tarea": "Limpieza DATE GATES + Reparacion IA", "inicio": "2026-07-07T12:52:46Z", "fin": "2026-07-07T16:56:40.995151+00:00", "status": "COMPLETED"}
