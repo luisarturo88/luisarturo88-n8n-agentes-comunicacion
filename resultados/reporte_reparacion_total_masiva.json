@@ -1,0 +1,102 @@
+{
+  "fecha": "2026-07-07T20:12:39.238017",
+  "resumen": "Reparación Masiva Completada. Flujos reparados: 0. Errores detectados no reparados automáticamente: 10",
+  "detalles": [
+    {
+      "flujo": "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS EN GATOS",
+      "id": "1zGqGSPhZITvCttw",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '💰 02 - Inyectar Afiliados (Matching)' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\uddbc\\ufe0f Image Injector (Pexels Mascotas)' en un parámetro.",
+        "Nodo 'Agregar Enlaces Internos' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udcb0 02 - Inyectar Afiliados (Matching)' en un parámetro.",
+        "Nodo 'Filtrado y selección de citas1' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado 'BIBLIOGRAF\\u00cdA PDF MV' en un parámetro.",
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "FLUJO VETERINARIO MILLONARIO - TECNOLOGÍA",
+      "id": "7554aQXudKBRWEkQ",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '💰 02 - Inyectar Afiliados (Matching)' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\uddbc\\ufe0f Image Injector (Pexels Mascotas)' en un parámetro.",
+        "Nodo 'Agregar Enlaces Internos' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udcb0 02 - Inyectar Afiliados (Matching)' en un parámetro.",
+        "Nodo 'Filtrado y selección de citas1' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado 'BIBLIOGRAF\\u00cdA PDF MV' en un parámetro.",
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "Veterinario QUITO Luis Blogger copy",
+      "id": "930XCm4vY3TurOlL",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "8 FLUJO VETERINARIA + CASOS ESTUDIOS (LISTO)",
+      "id": "9KrKde8O3cijCcBf",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '💰 02 - Inyectar Afiliados (Matching)1' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\u23f1\\ufe0f Wait (casos)' en un parámetro.",
+        "Nodo 'Filtrado y selección de citas' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado 'BIBLIOGRAF\\u00cdA  PDF MV' en un parámetro.",
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "FLUJO VETERINARIO MILLONARIO - ANSIEDAD Y ESTRES",
+      "id": "HtFV0KcqD42VqZvr",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '💰 02 - Inyectar Afiliados (Matching)' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\uddbc\\ufe0f Image Injector (Pexels Mascotas)' en un parámetro.",
+        "Nodo 'Agregar Enlaces Internos' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udcb0 02 - Inyectar Afiliados (Matching)' en un parámetro.",
+        "Nodo 'Filtrado y selección de citas1' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado 'BIBLIOGRAF\\u00cdA PDF MV' en un parámetro.",
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "FLUJO VETERINARIO MILLONARIO - 10 NICHOS MASCOTAS",
+      "id": "IyUZcl96GcRjVZF5",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '💰 02 - Inyectar Afiliados (Matching)' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\uddbc\\ufe0f Image Injector (Pexels Mascotas)' en un parámetro.",
+        "Nodo 'Agregar Enlaces Internos' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udcb0 02 - Inyectar Afiliados (Matching)' en un parámetro.",
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "FLUJO VETERINARIO LUIS BLOGGER",
+      "id": "JDJKp1yYSFFu4BtV",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+      "id": "MwA6MSqZnsdNqv5Y",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '💰 02 - Inyectar Afiliados (Matching)' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\uddbc\\ufe0f Image Injector (Pexels Mascotas)' en un parámetro.",
+        "Nodo 'Agregar Enlaces Internos' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udcb0 02 - Inyectar Afiliados (Matching)' en un parámetro.",
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "6C Generador de Temas Veterinarios (Fase 2)",
+      "id": "Xae4B5SXSbqHRPrl",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo 'Agente 5 Contenido' (Tipo: @n8n/n8n-nodes-langchain.agent): Referencia a nodo inexistente o mal formado 'Agente 3 Intenci\\u00f3n' en un parámetro.",
+        "Nodo 'Agente 6 Monetización' (Tipo: @n8n/n8n-nodes-langchain.agent): Referencia a nodo inexistente o mal formado 'Agente 3 Intenci\\u00f3n' en un parámetro."
+      ]
+    },
+    {
+      "flujo": "Veterinario ECUADOR Y MUNDO Luis Blogger copy",
+      "id": "cabjTOjqu7Ks1r58",
+      "estado": "ERROR_DETECTADO_NO_REPARADO",
+      "detalle": [
+        "Nodo '🔗 Fusionar Datos del Caso' (Tipo: n8n-nodes-base.code): Referencia a nodo inexistente o mal formado '\\ud83d\\udd27 Preparar casos para IA' en un parámetro."
+      ]
+    }
+  ]
+}
