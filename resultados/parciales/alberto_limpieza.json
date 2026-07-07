@@ -1,0 +1,256 @@
+{
+  "agente": "Alberto",
+  "timestamp": "2026-07-07T12:52:46.847524+00:00",
+  "accion": "Limpieza de DATE GATES y activacion masiva",
+  "nodos_eliminados": [
+    {
+      "workflow_id": "CDQHp2kdQszHYKqN",
+      "workflow_name": "FLUJO_VET_PRIMERA_PERSONA_V3",
+      "nodo": "🚦 DATE GATE - Bloque 1",
+      "tipo": "n8n-nodes-base.code",
+      "posicion": [
+        500,
+        300
+      ]
+    },
+    {
+      "workflow_id": "bssm7ANnpogoMt0V",
+      "workflow_name": "Inchazon de barriga SIN REPETICION DE TEMAS",
+      "nodo": "🚦 DATE GATE - Bloque 3",
+      "tipo": "n8n-nodes-base.code",
+      "posicion": [
+        500,
+        300
+      ]
+    }
+  ],
+  "flujos_procesados": [
+    {
+      "workflow_id": "JDJKp1yYSFFu4BtV",
+      "workflow_name": "FLUJO VETERINARIO LUIS BLOGGER",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "cabjTOjqu7Ks1r58",
+      "workflow_name": "Veterinario ECUADOR Y MUNDO Luis Blogger copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "930XCm4vY3TurOlL",
+      "workflow_name": "Veterinario QUITO Luis Blogger copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "cthc7GvuYZlPIDCI",
+      "workflow_name": "Veterinario CUENCA Luis Blogger copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "1zGqGSPhZITvCttw",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - RENALES Y URINARIOS EN GATOS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "7554aQXudKBRWEkQ",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - TECNOLOGÍA",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "9KrKde8O3cijCcBf",
+      "workflow_name": "8 FLUJO VETERINARIA + CASOS ESTUDIOS (LISTO)",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "CDQHp2kdQszHYKqN",
+      "workflow_name": "FLUJO_VET_PRIMERA_PERSONA_V3",
+      "accion": "gates_removed"
+    },
+    {
+      "workflow_id": "bDEvev5P1BC9MAPA",
+      "workflow_name": "mejorar articulos veterinario",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "IyUZcl96GcRjVZF5",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - 10 NICHOS MASCOTAS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "HtFV0KcqD42VqZvr",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - ANSIEDAD Y ESTRES",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "MwA6MSqZnsdNqv5Y",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "FNSqMpwphHB1w3WL",
+      "workflow_name": "BULLDOGS FLUJO copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "AeGdjdxnXZThPmjE",
+      "workflow_name": "LOROS SIN REPETICION DE TEMAS copy copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "aqJQo8AEmxH4euHZ",
+      "workflow_name": "HURONES SIN REPETICION DE TEMAS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "EjgZ8uVfHQqzQqbF",
+      "workflow_name": "REPTILES SIN REPETICION DE TEMAS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "DS5gqoroBG3SAXKB",
+      "workflow_name": "ALIMENTOS PARA PERROS SIN REPETICION DE TEMAS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "aWuJN5aWVLfdrJAi",
+      "workflow_name": "ALIMENTOS PARA GATOS SIN REPETICION DE TEMAS copy copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "QtenfTotJPqU72x2",
+      "workflow_name": "KROMASOL SALUD",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "Xu385bbjE7JqapnW",
+      "workflow_name": "ACUARIOS BIOTOPO SIN REPETICION DE TEMAS",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "STiwKMm2UXn6jSfa",
+      "workflow_name": "ACUARIOS BIOTIPO SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "7rdIEIngthCHxiHV",
+      "workflow_name": "PEZ BETTA REPETICION DE TEMAS copy LISTO",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "NiEeirlD1yI7zVhu",
+      "workflow_name": "PEZ Guppy REPETICION DE TEMAS copy LISTO copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "CZEzMQrOOA9UoWyn",
+      "workflow_name": "PEZ PLATY REPETICION DE TEMAS LISTO copy copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "3TihmuY7TlK4NZSN",
+      "workflow_name": "BOVINOS SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+      "accion": "sin_gates"
+    },
+    {
+      "workflow_id": "bssm7ANnpogoMt0V",
+      "workflow_name": "Inchazon de barriga SIN REPETICION DE TEMAS",
+      "accion": "gates_removed"
+    },
+    {
+      "workflow_id": "UCXNMMBg1NZPmH5v",
+      "workflow_name": "1 FLUJO ANTI ESTRES MILLONARIO",
+      "accion": "sin_gates"
+    }
+  ],
+  "activaciones": [
+    {
+      "workflow_id": "HtFV0KcqD42VqZvr",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - ANSIEDAD Y ESTRES",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "MwA6MSqZnsdNqv5Y",
+      "workflow_name": "FLUJO VETERINARIO MILLONARIO - MASCOTAS EXÓTICAS",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "FNSqMpwphHB1w3WL",
+      "workflow_name": "BULLDOGS FLUJO copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "AeGdjdxnXZThPmjE",
+      "workflow_name": "LOROS SIN REPETICION DE TEMAS copy copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "aqJQo8AEmxH4euHZ",
+      "workflow_name": "HURONES SIN REPETICION DE TEMAS",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "DS5gqoroBG3SAXKB",
+      "workflow_name": "ALIMENTOS PARA PERROS SIN REPETICION DE TEMAS",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "aWuJN5aWVLfdrJAi",
+      "workflow_name": "ALIMENTOS PARA GATOS SIN REPETICION DE TEMAS copy copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "QtenfTotJPqU72x2",
+      "workflow_name": "KROMASOL SALUD",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "Xu385bbjE7JqapnW",
+      "workflow_name": "ACUARIOS BIOTOPO SIN REPETICION DE TEMAS",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "STiwKMm2UXn6jSfa",
+      "workflow_name": "ACUARIOS BIOTIPO SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "7rdIEIngthCHxiHV",
+      "workflow_name": "PEZ BETTA REPETICION DE TEMAS copy LISTO",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "NiEeirlD1yI7zVhu",
+      "workflow_name": "PEZ Guppy REPETICION DE TEMAS copy LISTO copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "CZEzMQrOOA9UoWyn",
+      "workflow_name": "PEZ PLATY REPETICION DE TEMAS LISTO copy copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "3TihmuY7TlK4NZSN",
+      "workflow_name": "BOVINOS SIN REPETICION DE TEMAS copy copy copy copy copy copy",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "bssm7ANnpogoMt0V",
+      "workflow_name": "Inchazon de barriga SIN REPETICION DE TEMAS",
+      "status": "activated"
+    },
+    {
+      "workflow_id": "UCXNMMBg1NZPmH5v",
+      "workflow_name": "1 FLUJO ANTI ESTRES MILLONARIO",
+      "status": "activated"
+    }
+  ],
+  "errores": [],
+  "status": "COMPLETED",
+  "fin": "2026-07-07T12:53:39.534189+00:00",
+  "resumen": {
+    "total_flujos": 27,
+    "nodos_eliminados": 2,
+    "flujos_con_cambios": 2,
+    "activaciones_exitosas": 16,
+    "errores": 0
+  }
+}
