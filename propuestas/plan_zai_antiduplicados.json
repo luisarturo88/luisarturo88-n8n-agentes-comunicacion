@@ -1,0 +1,36 @@
+{
+  "agente": "Z.ai",
+  "fecha": "2026-07-07T08:21:39.476217-05:00",
+  "tipo": "propuesta",
+  "estado": "pendiente_votacion",
+  "titulo": "Sistema Anti-Duplicados: Lock por Fila en Google Sheets",
+  "problema": "Sin mecanismo para evitar que 2+ flujos procesen la misma fila de un Sheet simultaneamente. Actualmente el filtro PUBLICADO=='NO' puede permitir que 2 flujos lean la misma fila.",
+  "solucion_propuesta": {
+    "estrategia": "Agregar un nodo 'Google Sheets Update' inmediatamente despues de 'Pick First Only' que cambie PUBLICADO de 'NO' a 'EN_PROCESO'. Si la actualizacion falla (ya fue tomada por otro flujo), el flujo se detiene.",
+    "nuevo_nodo": {
+      "tipo": "Google Sheets",
+      "operacion": "update",
+      "ubicacion": "Despues de 'Pick First Only', antes de 'AI Agent'",
+      "accion": "Update row where row_number={{$json.row_number}}, set PUBLICADO='EN_PROCESO'",
+      "matchingColumns": [
+        "row_number"
+      ]
+    },
+    "modificacion_mark_published": {
+      "descripcion": "El nodo 'Mark as Published' ya existe y funciona. Solo asegurarse que establece PUBLICADO='SI' y FECHA_PUBLICACION.",
+      "nota": "Si el flujo falla despues de marcar EN_PROCESO, la fila quedara trabada. Solucion: agregar nodo de manejo de errores que restore PUBLICADO='NO'."
+    },
+    "manejo_errores": {
+      "nuevo_nodo": {
+        "tipo": "Code",
+        "ubicacion": "Rama 'error' del flujo",
+        "accion": "Si el flujo falla, restaurar PUBLICADO='NO' para que se reintente en el proximo ciclo"
+      }
+    },
+    "alternativa_validacion": "En lugar de lock por fila, validar via Blogger API si el titulo ya existe antes de publicar. Mas robusto pero mas lento."
+  },
+  "flujos_a_modificar": [
+    "Todos los 28+ flujos veterinarios que lean de Google Sheets"
+  ],
+  "estimacion_tiempo": "15-20 min para implementar en todos los flujos via API"
+}
