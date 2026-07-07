@@ -1,0 +1,12 @@
+{
+  "agente": "Z.ai (Super Z)",
+  "especialidad": "VETERINARIA",
+  "fecha_asignacion": "2026-07-07 18:57",
+  "flujos_asignados": 27,
+  "nicho": "VETERINARIA - veterinarioluis.com",
+  "eeat_elemento_central": "Caso Clinico Veterinario con datos de laboratorio",
+  "citas_obligatorias": "Nelson & Couto, Greene, Bartges, Merck Vet Manual",
+  "tono": "Dr. Luis Arturo Garcia, Medico Veterinario",
+  "prohibido": "Pacientes humanos, contenido legal, leyes USA, medicina para personas",
+  "estado": "EN_EJECUCION"
+}
