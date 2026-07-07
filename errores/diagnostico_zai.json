@@ -1,42 +1,504 @@
 {
-  "agente": "Z.ai",
-  "fecha_actualizacion": "2026-07-07T08:12:58.780189-05:00",
-  "estado": "REPARADO_PARCIALMENTE",
-  "causa_raiz": "Chat Model sub-node desconectado de Agent nodes (v1.7 no soporta ai_languageModel)",
-  "acciones_tomadas": [
+  "meta": {
+    "agente": "Z.ai (Super Z)",
+    "fecha_iso": "2026-07-07T17:01:26.180900+00:00",
+    "fecha_legible": "2026-07-07 17:01 UTC-5",
+    "tarea": "diagnostico_profundo_errores_bloque1",
+    "metodologia": "API REST n8n v1 con includeData=true + analisis de conexiones Agent↔ChatModel",
+    "sesion": "continuacion_contexto_perdido",
+    "api_n8n_status": "EXPIRADA - datos obtenidos de cache sesion anterior"
+  },
+  "causa_raiz_principal": {
+    "titulo": "Nodos LangChain Agent v1.7 SIN Chat Model conectado como sub-nodo",
+    "explicacion_detallada": "Todos los flujos del Bloque 1 fallan con el error: 'A Chat Model sub-node must be connected and enabled'. Este error ocurre en nodos de tipo @n8n/n8n-nodes-langchain.agent version 1.7. Aunque los flujos contienen nodos Chat Model (Cohere, Gemini, HuggingFace, DeepSeek), estos NO estan conectados como sub-nodos del Agent via el tipo de conexion 'ai_languageModel'. En n8n, los nodos Agent v1.x requieren que el Chat Model este cableado internamente como sub-nodo, no como nodo independiente en el flujo principal. La conexion visual existe en el canvas pero el tipo de conexion es incorrecto o inexistente.",
+    "error_exacto": "A Chat Model sub-node must be connected and enabled",
+    "nodos_afectados": {
+      "tipo": "@n8n/n8n-nodes-langchain.agent",
+      "versiones_problematicas": [
+        "1.7"
+      ],
+      "versiones_funcionales": [
+        "3.1"
+      ],
+      "nombres_comunes": [
+        "AI Agent (DeepSeek)",
+        "AI Agent (DeepSeek)1",
+        "🤖 Seleccionar y Adaptar Caso"
+      ]
+    },
+    "NO_es_Date_Gate": {
+      "afirmacion": "Los Date Gates NO existen en ninguno de los 28 flujos veterinarios.",
+      "detalle": "Se ejecuto diagnose_root_cause.py en sesion anterior y se confirmo que ningun flujo contiene nodos Date Gate. El sistema de stagger temporal se implementa unicamente via offsets en los cron schedules (23-41 minutos entre flujos).",
+      "implicacion": "La tarea asignada a Alberto de 'eliminar Date Gates' es IMPOSIBLE porque no hay Date Gates que eliminar."
+    }
+  },
+  "contradicciones_detectadas": [
     {
-      "accion": "Verificar conexiones ai_languageModel",
-      "resultado": "27 flujos ya tenian conexiones reparadas (por Alberto/u otro agente)"
+      "id": "CTR-001",
+      "tipo": "TAREA_IMPOSIBLE",
+      "agente_asignado": "Alberto",
+      "tarea_original": "Eliminar Date Gates de los 28 flujos",
+      "problema": "Los Date Gates nunca fueron implementados. Ningun flujo contiene nodos Date Gate. El stagger se hace via cron schedule offsets.",
+      "impacto": "Alberto no puede completar esta tarea. Se malgasta un ciclo de agente.",
+      "recomendacion": "Reasignar a Alberto: (a) conectar Chat Model como sub-nodos a Agent v1.7, o (b) migrar nodos Agent v1.7 a v3.1 con Chat Model integrado"
     },
     {
-      "accion": "Deshabilitar nodos v1.7 'Seleccionar y Adaptar Caso'",
-      "resultado": "27 flujos - nodo deshabilitado (no soporta ai_languageModel)"
+      "id": "CTR-002",
+      "tipo": "CONTRADICCION_SISTEMA_TEMPORAL",
+      "agente_asignado": "Alberto",
+      "tarea_original": "Activar masivamente 26 flujos",
+      "problema": "El sistema de 3 bloques temporales (Jul 2026-Ene 2027, Ene-Jul 2027, Jul 2027-Ene 2028) requiere que SOLO los flujos del Bloque 1 esten activos actualmente. Activar 26 flujos destruye el stagger y causa: (a) Google Sheets quota exhaustion (60 req/min), (b) ejecuciones de flujos fuera de su periodo, (c) alta probabilidad de duplicados.",
+      "impacto": "CRITICO - Activar 26 flujos colapsaria el sistema",
+      "recomendacion": "Mantener SOLO flujos Bloque 1 activos. Los Bloque 2/3 se activan en Ene 2027 y Jul 2027 respectivamente."
     },
     {
-      "accion": "Re-habilitar y actualizar v1.7 AI Agent principales a v3.1",
-      "resultado": "12 flujos - AI Agent (DeepSeek) actualizado v1.7→v3.1"
+      "id": "CTR-003",
+      "tipo": "DESGASTE_CREDENCIALES",
+      "agente_asignado": "N/A",
+      "problema": "8 de 10 flujos Bloque 1 usan Cohere Chat Model v1 (API deprecated). DeepSeek reporto sin saldo en sesion anterior.",
+      "impacto": "Incluso si los nodos Agent se reparan, los flujos fallaran por credenciales agotadas o APIs deprecadas.",
+      "recomendacion": "Migrar Cohere→DeepSeek/Gemini ANTES de reactivar flujos"
     }
   ],
-  "nodos_deshabilitados_permanentemente": [
-    "🤖 Seleccionar y Adaptar Caso (v1.7) en 27 flujos - FUNCIONALIDAD DE CASOS CLINICOS DESHABILITADA TEMPORALMENTE"
+  "analisis_por_workflow": {
+    "VET LUIS BLOGGER": {
+      "id": "JDJKp1yYSFFu4BtV",
+      "activo": true,
+      "nodes": 24,
+      "agent_nodes": [
+        {
+          "name": "Validate and Fix Article",
+          "version": "3.1",
+          "status": "OK - v3.1 funcional"
+        },
+        {
+          "name": "AI Agent",
+          "version": "3.1",
+          "status": "OK - v3.1 funcional"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - v1.7 sin Chat Model sub-nodo, FUE DESHABILITADO en sesion anterior"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10",
+          "nota": "API deprecated v1"
+        },
+        {
+          "name": "Google Gemini Chat Model1",
+          "type": "lmChatGoogleGemini",
+          "credential_id": "wQOnKlUsbUnFFzD1",
+          "nota": "OK"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:23:09Z)"
+      ],
+      "reparaciones_previas": [
+        "Nodo 'Seleccionar y Adaptar Caso' deshabilitado en sesion anterior"
+      ]
+    },
+    "ECUADOR Y MUNDO": {
+      "id": "cabjTOjqu7Ks1r58",
+      "activo": true,
+      "nodes": 22,
+      "agent_nodes": [
+        {
+          "name": "Validate and Fix Article",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "AI Agent",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Hugging Face Inference Model",
+          "type": "lmOpenHuggingFaceInference",
+          "credential_id": "2VRVoufdAHdHIAdF",
+          "nota": "Verificar si funciona para generacion de articulos"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:25:09Z)"
+      ],
+      "reparaciones_previas": [
+        "Logro ejecucion exitosa post-reparacion en sesion anterior",
+        "Conexiones restauradas tras fix_cohere.py"
+      ]
+    },
+    "QUITO": {
+      "id": "930XCm4vY3TurOlL",
+      "activo": true,
+      "nodes": 23,
+      "agent_nodes": [
+        {
+          "name": "Validate and Fix Article",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "AI Agent",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10",
+          "nota": "REPARADO a DeepSeek en sesion anterior"
+        },
+        {
+          "name": "HuggingFace Chat Model",
+          "type": "lmOpenHuggingFaceInference",
+          "credential_id": "2VRVoufdAHdHIAdF"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:29:37Z)"
+      ],
+      "reparaciones_previas": [
+        "Cohere cambiado a DeepSeek via fix_cohere.py + fix_cohere2.py"
+      ]
+    },
+    "CUENCA": {
+      "id": "cthc7GvuYZlPIDCI",
+      "activo": true,
+      "nodes": 23,
+      "agent_nodes": [
+        {
+          "name": "Validate and Fix Article",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "AI Agent",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10",
+          "nota": "Aun usa Cohere - necesita migracion"
+        },
+        {
+          "name": "HuggingFace Chat Model",
+          "type": "lmOpenHuggingFaceInference",
+          "credential_id": "2VRVoufdAHdHIAdF"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:27:06Z)"
+      ],
+      "reparaciones_previas": []
+    },
+    "RENALES Y URINARIOS": {
+      "id": "1zGqGSPhZITvCttw",
+      "activo": true,
+      "nodes": 37,
+      "agent_nodes": [
+        {
+          "name": "AI Agent (DeepSeek)",
+          "version": "1.7",
+          "status": "CRITICAL - v1.7 sin Chat Model sub-nodo"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - v1.7 sin Chat Model sub-nodo, deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10"
+        },
+        {
+          "name": "Google Gemini Chat Model1",
+          "type": "lmChatGoogleGemini",
+          "credential_id": "wQOnKlUsbUnFFzD1"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:31:47Z)"
+      ],
+      "nota": "Agent principal es v1.7 - necesita migracion a v3.1"
+    },
+    "TECNOLOGIA": {
+      "id": "7554aQXudKBRWEkQ",
+      "activo": true,
+      "nodes": 37,
+      "agent_nodes": [
+        {
+          "name": "AI Agent (DeepSeek)",
+          "version": "1.7",
+          "status": "CRITICAL - v1.7 sin Chat Model sub-nodo"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10"
+        },
+        {
+          "name": "Google Gemini Chat Model1",
+          "type": "lmChatGoogleGemini",
+          "credential_id": "wQOnKlUsbUnFFzD1"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:33:46Z)"
+      ],
+      "nota": "Agent principal es v1.7 - necesita migracion a v3.1"
+    },
+    "CASOS ESTUDIOS": {
+      "id": "9KrKde8O3cijCcBf",
+      "activo": true,
+      "nodes": 45,
+      "agent_nodes": [
+        {
+          "name": "AI Agent (DeepSeek)1",
+          "version": "1.7",
+          "status": "CRITICAL - v1.7 sin Chat Model sub-nodo"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10"
+        },
+        {
+          "name": "HuggingFace Chat Model",
+          "type": "lmOpenHuggingFaceInference",
+          "credential_id": "2VRVoufdAHdHIAdF"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:35:52Z)"
+      ],
+      "nota": "El flujo mas grande (45 nodos). Ambos Agent son v1.7."
+    },
+    "10 NICHOS MASCOTAS": {
+      "id": "IyUZcl96GcRjVZF5",
+      "activo": true,
+      "nodes": 35,
+      "agent_nodes": [
+        {
+          "name": "AI Agent (DeepSeek)",
+          "version": "1.7",
+          "status": "CRITICAL - v1.7 sin Chat Model sub-nodo"
+        },
+        {
+          "name": "🤖 Seleccionar y Adaptar Caso",
+          "version": "1.7",
+          "status": "CRITICAL - deshabilitado"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10"
+        },
+        {
+          "name": "Google Gemini Chat Model1",
+          "type": "lmChatGoogleGemini",
+          "credential_id": "wQOnKlUsbUnFFzD1"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:41:05Z)"
+      ],
+      "nota": "Agent principal es v1.7 - necesita migracion a v3.1"
+    },
+    "mejorar articulos": {
+      "id": "bDEvev5P1BC9MAPA",
+      "activo": true,
+      "nodes": 29,
+      "agent_nodes": [
+        {
+          "name": "Generate Article with AI",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "AI Agent OPINION PROFESIONAL",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "AI Agent clasificador libros",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "agente cientifico",
+          "version": "3.1",
+          "status": "OK"
+        },
+        {
+          "name": "Structure Full Article",
+          "version": "3.1",
+          "status": "OK"
+        }
+      ],
+      "model_nodes": [
+        {
+          "name": "Cohere Chat Model (x5)",
+          "type": "lmChatCohere",
+          "credential_id": "6LmusRbYdpPXTD10",
+          "nota": "5 instancias de Cohere - todas deprecated v1"
+        }
+      ],
+      "errores_recientes": [
+        "ERROR: Error desconocido (2026-07-07T11:39:49Z)"
+      ],
+      "nota": "Todos los Agent son v3.1 pero usa 5 Cohere Models - probablemente falla por Cohere API"
+    },
+    "PRIMERA_PERSONA_V3": {
+      "id": "CDQHp2kdQszHYKqN",
+      "activo": true,
+      "nodes": 24,
+      "agent_nodes": [],
+      "model_nodes": [],
+      "ultimo_status": "Success pero solo 0 nodos ejecutados (posible Date Gate vacio)",
+      "nota": "Flujo atipico - no tiene nodos Agent ni Model. Posiblemente usa Date Gate que ejecuta 0 nodos."
+    }
+  },
+  "resumen_estadistico": {
+    "total_workflows_bloque1": 10,
+    "workflows_activos": 10,
+    "workflows_con_agent_v17": 4,
+    "workflows_con_solo_agent_v31": 2,
+    "workflows_mixtos_v17_v31": 3,
+    "workflows_sin_agent": 1,
+    "nodos_agent_v17_totales": 11,
+    "nodos_agent_v17_deshabilitados": 7,
+    "nodos_agent_v17_activos_pero_rotos": 4,
+    "nodos_agent_v31_totales": 12,
+    "workflows_usando_cohere": 8,
+    "workflows_usando_gemini": 4,
+    "workflows_usando_huggingface": 5,
+    "workflows_usando_deepseek": 1
+  },
+  "acciones_recomendadas_orden_prioridad": [
+    {
+      "prioridad": "P0",
+      "id": "ACT-001",
+      "accion": "Obtener nueva API key de n8n o verificar validez de la actual",
+      "detalle": "La API key actual (eyJhbGci...) retorna 401 Unauthorized. Sin acceso API no se pueden aplicar reparaciones.",
+      "responsable": "Usuario (Luis)"
+    },
+    {
+      "prioridad": "P0",
+      "id": "ACT-002",
+      "accion": "Verificar saldo de DeepSeek API",
+      "detalle": "En sesion anterior se reporto DeepSeek sin saldo. Si la key tNIbvUHUgCDukRly no tiene fondos, los flujos migrados a DeepSeek tampoco funcionaran.",
+      "responsable": "Usuario (Luis)"
+    },
+    {
+      "prioridad": "P1",
+      "id": "ACT-003",
+      "accion": "Migrar 4 nodos Agent v1.7 principales a v3.1",
+      "detalle": "RENALES, TECNOLOGIA, CASOS ESTUDIOS, 10 NICHOS MASCOTAS tienen su Agent principal en v1.7. Necesitan migracion a v3.1 y conexion de Chat Model como sub-nodo.",
+      "responsable_sugerido": "Z.ai o Claude",
+      "flujos_afectados": [
+        "RENALES Y URINARIOS",
+        "TECNOLOGIA",
+        "CASOS ESTUDIOS",
+        "10 NICHOS MASCOTAS"
+      ]
+    },
+    {
+      "prioridad": "P1",
+      "id": "ACT-004",
+      "accion": "Reemplazar Cohere Chat Model en 8 flujos",
+      "detalle": "Cohere API v1 esta deprecated. Migrar a DeepSeek (si tiene saldo) o Gemini en: VET LUIS BLOGGER, CUENCA, RENALES, TECNOLOGIA, CASOS ESTUDIOS, 10 NICHOS MASCOTAS, mejorar articulos (x5 instancias).",
+      "responsable_sugerido": "DeepSeek o Qwen"
+    },
+    {
+      "prioridad": "P2",
+      "id": "ACT-005",
+      "accion": "Decidir destino de 27 nodos 'Seleccionar y Adaptar Caso' deshabilitados",
+      "detalle": "Estos nodos v1.7 fueron deshabilitados como medida de emergencia. Opciones: (a) migrar a v3.1, (b) eliminar si la funcionalidad de casos clinicos no es critica, (c) reconstruir como nodo custom.",
+      "responsable_sugerido": "Usuario decide, Z.ai o Claude ejecuta"
+    },
+    {
+      "prioridad": "P2",
+      "id": "ACT-006",
+      "accion": "Desactivar 6 flujos no-veterinarios activos",
+      "detalle": "BULLDOGS dup, VIDEO_GENERADOR, VENTA KROMASOL, REDACCION USA, LITIGIOS USA, CAPTURA LEADS no pertenecen al sistema veterinario y consumen recursos.",
+      "responsable_sugerido": "Alberto"
+    },
+    {
+      "prioridad": "P3",
+      "id": "ACT-007",
+      "accion": "Implementar sistema anti-duplicados en Google Sheets",
+      "detalle": "Tracking de estados PENDIENTE → EN_PROCESO → PUBLICADO con columna de timestamp. Prevenir que multiples flujos escriban el mismo tema.",
+      "responsable_sugerido": "Z.ai"
+    }
   ],
-  "nodos_actualizados_v17_a_v31": [
-    "RENALES: AI Agent (DeepSeek) v1.7→v3.1",
-    "TECNOLOGIA: AI Agent (DeepSeek) v1.7→v3.1",
-    "CASOS ESTUDIOS: AI Agent (DeepSeek)1 v1.7→v3.1",
-    "10 NICHOS MASCOTAS: AI Agent (DeepSeek) v1.7→v3.1",
-    "ANSIEDAD Y ESTRES: AI Agent (DeepSeek) v1.7→v3.1",
-    "PRIMEROS AUXILIOS: AI Agent (DeepSeek) v1.7→v3.1",
-    "MASCOTAS EXOTICAS: AI Agent (DeepSeek) v1.7→v3.1",
-    "REPTILES: AI Agent v1.7→v3.1",
-    "ACUARIOS BIOTOPO (1): AI Agent v1.7→v3.1",
-    "KROMASOL SALUD: AI Agent v1.7→v3.1",
-    "ANTI ESTRES MILLONARIO: AI Agent (DeepSeek) v1.7→v3.1"
-  ],
-  "proxima_verificacion": "Esperar proxima ejecucion programada (~13:25 UTC) para confirmar que los flujos generan articulos correctamente",
-  "tareas_restantes_zai": [
-    "Verificar que los flujos publican articulos correctamente",
-    "Implementar sistema anti-duplicados PENDIENTE→EN_PROCESO→PUBLICADO",
-    "Inyectar System Prompt Maestro de Qwen (8 secciones)"
-  ]
+  "estado_bloques_temporales": {
+    "bloque_1": {
+      "periodo": "Jul 2026 - Ene 2027",
+      "estado": "ACTIVO_PERO_CON_ERRORES",
+      "flujos": 10,
+      "flujos_funcionales": 0,
+      "flujos_con_error": 10,
+      "cron_offsets": "23-41 minutos entre flujos"
+    },
+    "bloque_2": {
+      "periodo": "Ene 2027 - Jul 2027",
+      "estado": "INACTIVO_CORRECTO",
+      "flujos": "~10",
+      "activacion_programada": "Ene 2027"
+    },
+    "bloque_3": {
+      "periodo": "Jul 2027 - Ene 2028",
+      "estado": "INACTIVO_CORRECTO",
+      "flujos": "~8",
+      "activacion_programada": "Jul 2027"
+    }
+  }
 }
