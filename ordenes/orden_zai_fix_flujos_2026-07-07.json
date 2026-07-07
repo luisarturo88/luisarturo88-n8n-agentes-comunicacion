@@ -1,0 +1,160 @@
+{
+  "orden_id": "orden_zai_fix_flujos_2026-07-07",
+  "fecha": "2026-07-07T07:43:39.204095-05:00",
+  "agente_emisor": "Z.ai (Super Z)",
+  "tipo": "trabajo",
+  "prioridad": "CRITICA",
+  "estado": "PENDIENTE",
+  "resumen": "28 flujos veterinarios en n8n fallan. 18 fueron desactivados por reactivacion incorrecta. Quedan 10 del Bloque 1 activos pero todos con ERROR. Las ejecuciones tienen data vacia (fallan en <3 seg). Necesitamos diagnosticar la causa raiz y reparar.",
+  "hallazgos_audit": {
+    "total_workflows": 48,
+    "activos_correctos": 10,
+    "fueron_reactivados_incorrectamente": 18,
+    "ya_desactivados_por_zai": 18,
+    "todos_bloque1_con_error": true,
+    "ejecuciones_data_vacia": true,
+    "flujos_activos_que_no_deberian_estar": [
+      "KGwwzXQSwVRd2HVp (BULLDOGS duplicado)",
+      "4zAbZN3IAarfho95 (VIDEO_GENERADOR Agnes)",
+      "dq8rNUUaqPZxitqT (VENTA KROMASOL)",
+      "ihFZA5sNIaEPIfhc (REDACCION USA)",
+      "lxKKhQ1tVJ24Ml5X (LITIGIOS USA)",
+      "mGSt2K3WeJPAn1XO (CAPTURA LEADS KROMASOL)"
+    ]
+  },
+  "bloque1_activos_con_error": [
+    {
+      "id": "JDJKp1yYSFFu4BtV",
+      "nombre": "FLUJO VET LUIS BLOGGER",
+      "nodos": 24,
+      "error": "ejecucion con data vacia (falla en <3s)"
+    },
+    {
+      "id": "cabjTOjqu7Ks1r58",
+      "nombre": "ECUADOR Y MUNDO",
+      "nodos": 22,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "930XCm4vY3TurOlL",
+      "nombre": "QUITO",
+      "nodos": 23,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "cthc7GvuYZlPIDCI",
+      "nombre": "CUENCA",
+      "nodos": 23,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "1zGqGSPhZITvCttw",
+      "nombre": "RENALES Y URINARIOS",
+      "nodos": 37,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "7554aQXudKBRWEkQ",
+      "nombre": "TECNOLOGIA",
+      "nodos": 37,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "9KrKde8O3cijCcBf",
+      "nombre": "CASOS ESTUDIOS",
+      "nodos": 45,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "CDQHp2kdQszHYKqN",
+      "nombre": "PRIMERA_PERSONA_V3",
+      "nodos": 24,
+      "error": "Date Gate vacio (0 nodos ejecutados)"
+    },
+    {
+      "id": "bDEvev5P1BC9MAPA",
+      "nombre": "mejorar articulos",
+      "nodos": 29,
+      "error": "ejecucion con data vacia"
+    },
+    {
+      "id": "IyUZcl96GcRjVZF5",
+      "nombre": "10 NICHOS MASCOTAS",
+      "nodos": 35,
+      "error": "ejecucion con data vacia"
+    }
+  ],
+  "subtareas": [
+    {
+      "id": "S1",
+      "titulo": "Diagnosticar causa raiz de ejecuciones vacias",
+      "asignado_a": "disponible",
+      "lock": "no",
+      "accion": "Obtener detalle completo de un flujo del Bloque 1 via GET /workflows/{id}. Analizar la estructura de nodos, especialmente el primer nodo despues del trigger (Date Gate). Verificar si el Date Gate tiene errores de sintaxis. Probar ejecucion manual via POST /workflows/{id}/run.",
+      "flows": [
+        "JDJKp1yYSFFu4BtV"
+      ]
+    },
+    {
+      "id": "S2",
+      "titulo": "Verificar y reparar Date Gates de los 10 flujos del Bloque 1",
+      "asignado_a": "disponible",
+      "lock": "no",
+      "accion": "Para cada flujo del Bloque 1, obtener el JSON completo, buscar el nodo 'DATE GATE', verificar que las fechas sean correctas (2026-07-07 a 2027-01-07), y que el codigo JS retorne $input.all() correctamente.",
+      "flows": [
+        "JDJKp1yYSFFu4BtV",
+        "cabjTOjqu7Ks1r58",
+        "930XCm4vY3TurOlL",
+        "cthc7GvuYZlPIDCI",
+        "1zGqGSPhZITvCttw",
+        "7554aQXudKBRWEkQ",
+        "9KrKde8O3cijCcBf",
+        "CDQHp2kdQszHYKqN",
+        "bDEvev5P1BC9MAPA",
+        "IyUZcl96GcRjVZF5"
+      ]
+    },
+    {
+      "id": "S3",
+      "titulo": "Verificar credenciales de IA (DeepSeek, Gemini, Cohere)",
+      "asignado_a": "disponible",
+      "lock": "no",
+      "accion": "DeepSeek reporto 'Insufficient Balance' en sesion anterior. Verificar si el saldo se reponso. Cohere tiene bugs con tool definitions. Gemini tiene rate limits. Identificar que modelo usa cada flujo y si las credenciales son validas."
+    },
+    {
+      "id": "S4",
+      "titulo": "Desactivar flujos no veterinarios activos",
+      "asignado_a": "disponible",
+      "lock": "no",
+      "accion": "Desactivar via POST /workflows/{id}/deactivate: BULLDOGS duplicado (KGwwzXQSwVRd2HVp), VIDEO_GENERADOR (4zAbZN3IAarfho95), VENTA KROMASOL (dq8rNUUaqPZxitqT), REDACCION USA (ihFZA5sNIaEPIfhc), LITIGIOS USA (lxKKhQ1tVJ24Ml5X), CAPTURA LEADS (mGSt2K3WeJPAn1XO).",
+      "flows": [
+        "KGwwzXQSwVRd2HVp",
+        "4zAbZN3IAarfho95",
+        "dq8rNUUaqPZxitqT",
+        "ihFZA5sNIaEPIfhc",
+        "lxKKhQ1tVJ24Ml5X",
+        "mGSt2K3WeJPAn1XO"
+      ]
+    },
+    {
+      "id": "S5",
+      "titulo": "Probar ejecucion manual de un flujo reparado",
+      "asignado_a": "disponible",
+      "lock": "no",
+      "accion": "Una vez diagnosticado y reparado el error, ejecutar manualmente POST /workflows/{id}/run para verificar que el flujo completa exitosamente."
+    }
+  ],
+  "reglas_criticas": [
+    "NO reactivar flujos del Bloque 2 o 3",
+    "NO cambiar intervalos de Schedule Trigger del Bloque 1 (23,25,27,29,31,33,35,37,39,41 min)",
+    "PRESERVAR conexiones entre nodos al modificar flujos",
+    "NO usar Cohere para Agent nodes con tools",
+    "Leer contexto/INFORME_UNIFICADO_VETERINARIA.md antes de modificar",
+    "TODOS los flujos veterinarios publican a Blog ID 2772493032989228627",
+    "Usar clean_for_update() antes de PUT /workflows/{id}"
+  ],
+  "webhooks_swarm": {
+    "mensajero": "https://vmi3096105.contaboserver.net/webhook/swarm-orden",
+    "trabajador": "https://vmi3096105.contaboserver.net/webhook/swarm-worker"
+  }
+}
