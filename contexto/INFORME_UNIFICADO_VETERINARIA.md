@@ -16,9 +16,9 @@ Este documento pone a TODAS las IAs (Qwen, DeepSeek, Gemini, Z.ai, Claude, etc.)
 - **URL**: https://vmi3096105.contaboserver.net
 - **API REST v1**: https://vmi3096105.contaboserver.net/api/v1
 - **API Keys JWT activas** (cualquiera sirve):
-  - Z.ai original: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmOGM1MTJmNy1mNTVhLTQwYjYtYWU1Ni00MDM0OWNlMDlmMjkiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiYTZjNmY0NWEtY2FiZS00NDg0LTg1NzktZWNkZjk3NDRmMDk1IiwiaWF0IjoxNzgzMzM5NDczLCJleHAiOjE3ODU5MDI0MDB9.iqL6k-FlI1MkD2a-dVex7sx0NovUtf93SlCWwb4n4XE`
-  - Generada por Qwen: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmOGM1MTJmNy1mNTVhLTQwYjYtYWU1Ni00MDM0OWNlMDlmMjkiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiODRjZDhhMDYtYTU0Zi00YzhlLTllNjMtMTNhYTI1MWY1NzRjIiwiaWF0IjoxNzgzNDEwOTY4LCJleHAiOjE3ODU5ODg4MDB9.iYtQ-SbN6asJc02OSMjQ-7W3FynRGOD9RTgMqGqssls`
-  - Generada por DeepSeek: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmOGM1MTJmNy1mNTVhLTQwYjYtYWU1Ni00MDM0OWNlMDlmMjkiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiMmZiMDU5NWUtNmVkMS00NTMwLWE4YWItN2EzZTA3NTQxZjBhIiwiaWF0IjoxNzgzNDEzMzMyLCJleHAiOjE3ODU5ODg4MDB9.kaL4vQbHdmH2vLE3DhsK1u4n_P9RKvGMhwBp1eG3Hfk`
+  - Z.ai original: `[REVOCADA - API key eliminada del repo]`
+  - Generada por Qwen: `[REVOCADA - API key eliminada del repo]`
+  - Generada por DeepSeek: `[REVOCADA - API key eliminada del repo]`
 - **Header para requests**: `X-N8N-API-KEY: <key>`
 - **n8n __rl format**: Los IDs de credenciales y sheets en n8n usan formato `{__rl: true, value: "actual_id", mode: "id", cachedResultName: "display_name"}`
 

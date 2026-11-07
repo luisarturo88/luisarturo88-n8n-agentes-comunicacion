@@ -1,0 +1,4 @@
+
+# Secretos nunca en Git: usar credenciales de n8n o variables de entorno
+contexto/CREDENCIALES*
+*.env
